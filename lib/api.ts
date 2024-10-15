@@ -28,7 +28,7 @@ export async function fetchProjects() {
 			projectType: project.ProjectType,
 		}));
 
-		return [project]; // Return the project as an array to be used in the frontend
+		return [projects]; // Return the project as an array to be used in the frontend
 	} catch (error) {
 		console.error("Error fetching project:", error);
 		return [];
