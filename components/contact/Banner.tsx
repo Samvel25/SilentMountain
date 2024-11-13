@@ -18,20 +18,6 @@ const Banner = () => {
 							</h2>
 						</div>
 					</div>
-					<div className="col-lg-6 col-md-10 d-grid align-items-end justify-content-end">
-						<div className="breadcrumb-area position-absolute end-0 bottom-0">
-							<nav aria-label="breadcrumb">
-								<ol className="breadcrumb m-0 py-3 px-8 fs-six d-flex align-items-end justify-content-end">
-									<li className="breadcrumb-item p-0 m-0">
-										{/* <Link href="/">Home</Link> */}
-									</li>
-									<li className="breadcrumb-item active" aria-current="page">
-										Contact Us
-									</li>
-								</ol>
-							</nav>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>
