@@ -26,13 +26,14 @@
 @import "./bootstrap.scss";
 @import "./../css/plugins/remixicon-min.css";
 @import "./../css/plugins/fontawesome.min.css";
-@import 'node_modules/react-modal-video/scss/modal-video.scss';
+@import "node_modules/react-modal-video/scss/modal-video.scss";
 // Sass Global
 @import "./main/_global.scss";
 
 // Pages
 @import "./pages/_banner-footer.scss";
 @import "./pages/_section.scss";
+@import "./pages/_contact-form.scss";
 
 // Responsive Area
 @import "./main/_responsive.scss";

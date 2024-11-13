@@ -11,7 +11,7 @@ const page = () => {
 			{/* Blogs */}
 			<Blogs />
 			{/* Instagram posts */}
-			<InstagramPost />
+			{/* <InstagramPost /> */}
 		</>
 	);
 };

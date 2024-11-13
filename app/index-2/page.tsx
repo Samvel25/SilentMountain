@@ -10,9 +10,9 @@ import Gallery from "@/components/home-2/Gallery";
 import Jobs from "@/components/home-2/Jobs";
 import OurGames from "@/components/home-2/OurGames";
 import Partner from "@/components/home-2/Partner";
-import Recent from "@/components/home-2/Recent";
 import Service from "@/components/home-2/Service";
 import Team from "@/components/home-2/Team";
+import Recent from "@/components/home-2/Recent";
 
 const page = () => {
 	return (

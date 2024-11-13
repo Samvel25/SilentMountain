@@ -9,7 +9,8 @@
 	.banner-section.index .overlay::after {
 		left: 25%;
 	}
-	.our-games::before, .our-games::after {
+	.our-games::before,
+	.our-games::after {
 		width: 350px;
 		height: 230px;
 		background-size: 90%;
@@ -22,14 +23,15 @@
 		width: 65%;
 	}
 	.our-games.top-features {
-		&::before, &::after {
+		&::before,
+		&::after {
 			display: none;
 		}
 	}
 }
 
 @media (max-width: 1699px) {
-	.about-block .shape-area img.shape-2{
+	.about-block .shape-area img.shape-2 {
 		right: 0;
 	}
 	.banner-section.about {
@@ -41,7 +43,7 @@
 	.our-gaming-community .community-box .community-area .community-item img {
 		width: 55%;
 	}
-	.banner-section.pricing-plan{
+	.banner-section.pricing-plan {
 		background-position: left;
 		background-size: cover;
 	}
@@ -70,9 +72,9 @@
 }
 
 @media (max-width: 1399px) {
-	.life-gamestorm .post-img{
+	.life-gamestorm .post-img {
 		width: 100% !important;
-		.single{
+		.single {
 			flex: 0 0 calc(50% - 6px);
 		}
 	}
@@ -94,11 +96,13 @@
 }
 
 @media (max-width: 1199px) {
-	h1, h1>a {
+	h1,
+	h1 > a {
 		font-size: 57px;
 		line-height: 74.1px;
 	}
-	h2, h2>a {
+	h2,
+	h2 > a {
 		font-size: 43px;
 		line-height: 55.9px;
 	}
@@ -111,7 +115,7 @@
 	.sidebar-wrapper.sidebar-active .sidebar-content .navbar-nav {
 		gap: 20px !important;
 	}
-	.sidebar-wrapper .sidebar-content{
+	.sidebar-wrapper .sidebar-content {
 		position: absolute;
 		z-index: 9999;
 		left: 100px;
@@ -127,17 +131,17 @@
 		width: 100px;
 		height: calc(100vh - 70px);
 	}
-	.sidebar-wrapper{
+	.sidebar-wrapper {
 		position: fixed;
 		width: 100%;
 		z-index: 5;
-		.side-menubar{
+		.side-menubar {
 			opacity: 0;
 			transform: translateX(-100px);
 			transition: 0.5s;
 		}
-		&.active-mobile{
-			.side-menubar{
+		&.active-mobile {
+			.side-menubar {
 				opacity: 1;
 				transform: translateX(0);
 				transition: 0.5s;
@@ -156,11 +160,11 @@
 			justify-content: center;
 		}
 	}
-	.mobile-menu{
-		span{
+	.mobile-menu {
+		span {
 			font-size: 12px;
 		}
-		i{
+		i {
 			color: var(--n0);
 		}
 	}
@@ -175,7 +179,7 @@
 	.header-section.header-menu .single-item.cart-area {
 		padding-left: 0;
 	}
-	.sidebar-wrapper #navbar-clone .navbar-nav{
+	.sidebar-wrapper #navbar-clone .navbar-nav {
 		display: flex !important;
 	}
 	.header-section .navbar {
@@ -190,26 +194,27 @@
 		}
 	}
 	.header-section .navbar .navbar-nav li {
-		button{
+		button {
 			justify-content: center !important;
 			align-items: center !important;
 		}
-		a{
+		a {
 			justify-content: start !important;
 			align-items: center !important;
 		}
-		ul li{
-			button, a{
+		ul li {
+			button,
+			a {
 				justify-content: start !important;
 				align-items: start !important;
 			}
 		}
 	}
-	.header-section .navbar .navbar-nav a{
+	.header-section .navbar .navbar-nav a {
 		justify-content: start !important;
 		align-items: start !important;
 	}
-	.header-section .navbar .navbar-nav button{
+	.header-section .navbar .navbar-nav button {
 		display: inline-flex !important;
 	}
 	.sidebar-wrapper .sidebar-content .footer-items {
@@ -220,11 +225,12 @@
 		left: calc(50% - 220px);
 		bottom: 5%;
 	}
-	.about-block .shape-area img.shape-2{
+	.about-block .shape-area img.shape-2 {
 		bottom: 5%;
 	}
-	.our-games.index-two{
-		&::after, &::before{
+	.our-games.index-two {
+		&::after,
+		&::before {
 			display: none;
 		}
 	}
@@ -254,7 +260,7 @@
 	.our-gaming-community .community-box .community-area .community-item img {
 		width: 40%;
 	}
-	.our-focus.game-trailers{
+	.our-focus.game-trailers {
 		.circle-text {
 			width: 200px;
 			height: 200px;
@@ -291,84 +297,84 @@
 		font-size: 72px;
 		line-height: 86.4px;
 	}
-	
+
 	.display-two {
 		font-size: 64px;
 		line-height: 76.8px;
 	}
-	
+
 	.display-three {
 		font-size: 56px;
 		line-height: 67.2px;
 	}
-	
+
 	.display-four {
 		font-size: 48px;
 		line-height: 46.4px;
 	}
-	
+
 	.display-five {
 		font-size: 42px;
 		line-height: 54.6px;
 	}
-	
+
 	.display-six {
 		font-size: 32px;
 		line-height: 38.4px;
 	}
-	
+
 	.fs-one,
 	h1,
 	h1 > a {
 		font-size: 40px;
 		line-height: 48px;
 	}
-	
+
 	.fs-two,
 	h2,
 	h2 > a {
 		font-size: 32px;
 		line-height: 38.4px;
 	}
-	
+
 	.fs-three,
 	h3,
 	h3 > a {
 		font-size: 24px;
 		line-height: 31.2px;
 	}
-	
+
 	.fs-four,
 	h4,
 	h4 > a {
 		font-size: 20px;
 		line-height: 26px;
 	}
-	
+
 	.fs-five,
 	h5,
 	h5 > a {
 		font-size: 16px;
 		line-height: 20.8px;
 	}
-	
+
 	.fs-six,
 	h6,
 	h6 > a {
 		font-size: 14px;
 		line-height: 18.8px;
 	}
-	
+
 	.fs-seven {
 		font-size: 13px;
 		line-height: 18.8px;
 	}
-	
+
 	table thead tr th {
 		font-size: 15px;
 		line-height: 20.8px;
 	}
-	
+
 	a,
 	p,
 	span,
@@ -384,7 +390,7 @@
 	.section-header {
 		margin-bottom: 40px;
 	}
-	
+
 	.title {
 		margin-bottom: 20px;
 	}
@@ -393,7 +399,7 @@
 		height: 30vh;
 	}
 
-	.banner-section .overlay .sec-img{
+	.banner-section .overlay .sec-img {
 		display: none;
 	}
 	.banner-section .overlay .banner-content {
@@ -406,7 +412,7 @@
 		text-align: center;
 		margin-top: 30px;
 		max-width: 65%;
-		img{
+		img {
 			max-width: 100% !important;
 		}
 	}
@@ -445,7 +451,7 @@
 		padding: 160px 0 0;
 	}
 	.banner-section.index-two .btn-item {
-		i{
+		i {
 			right: 5%;
 		}
 		a {
@@ -470,7 +476,7 @@
 	.our-games .thumb-img {
 		clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
 	}
-	.recently-completed .cus-position{
+	.recently-completed .cus-position {
 		position: initial !important;
 		margin-top: -40px;
 	}
@@ -493,7 +499,7 @@
 	.banner-section.inner-banner.game-details .banner-content {
 		padding: 70px 0 100px;
 	}
-	.our-focus.game-trailers{
+	.our-focus.game-trailers {
 		.circle-text {
 			width: 100px;
 			height: 100px;
@@ -512,7 +518,7 @@
 			}
 		}
 	}
-	.services .single-box:hover .abs-area{
+	.services .single-box:hover .abs-area {
 		width: 80px;
 		height: 80px;
 	}
@@ -568,7 +574,7 @@
 		min-width: 45px;
 		height: 45px;
 	}
-	.store .single-box{
+	.store .single-box {
 		display: inline-flex !important;
 		.box-style.btn-box {
 			padding: 10px 12px;
@@ -591,32 +597,32 @@
 		font-size: 56px;
 		line-height: 67.2px;
 	}
-	
+
 	.display-two {
 		font-size: 48px;
 		line-height: 46.4px;
 	}
-	
+
 	.display-three {
 		font-size: 42px;
 		line-height: 54.6px;
 	}
-	
+
 	.display-four {
 		font-size: 32px;
 		line-height: 38.4px;
 	}
-	
+
 	.display-five {
 		font-size: 24px;
 		line-height: 31.2px;
 	}
-	
+
 	.display-six {
 		font-size: 32px;
 		line-height: 38.4px;
 	}
-	
+
 	.section-header {
 		margin-bottom: 35px;
 	}
@@ -655,7 +661,7 @@
 	.how-it-works .abs-area {
 		right: 0;
 	}
-	.store .single-box img{
+	.store .single-box img {
 		width: 100px;
 	}
 }
@@ -667,18 +673,18 @@
 	.sidebar-wrapper .sidebar-content {
 		left: 50px;
 	}
-	.banner-section .col-10{
+	.banner-section .col-10 {
 		width: 100% !important;
 	}
 	.call-to-action .video-bg span {
 		width: 50px;
 		height: 50px;
 	}
-	.footer-section .social-items li{
-		span{
+	.footer-section .social-items li {
+		span {
 			display: none;
 		}
-		i{
+		i {
 			font-size: 20px;
 		}
 	}
@@ -690,10 +696,10 @@
 		height: 85px;
 		font-size: 12px;
 	}
-	.our-games.all-games .col-8{
+	.our-games.all-games .col-8 {
 		width: 100% !important;
 	}
-	.team-members .col-6{
+	.team-members .col-6 {
 		width: 80% !important;
 	}
 	.gaming-character .section-dots {
@@ -703,17 +709,18 @@
 	.banner-section.index-one::after {
 		display: none;
 	}
-	.sidebar-wrapper .sidebar-content .header-fixed, .sidebar-wrapper .sidebar-content .header-section {
+	.sidebar-wrapper .sidebar-content .header-fixed,
+	.sidebar-wrapper .sidebar-content .header-section {
 		justify-content: start;
 	}
-	.header-section .navbar .navbar-nav{
+	.header-section .navbar .navbar-nav {
 		width: 100%;
 	}
 	.our-gaming-community .main-content {
 		width: 290px;
 		height: 290px;
 	}
-	.cart-details .content-box .icon-box img{
+	.cart-details .content-box .icon-box img {
 		width: 60px;
 	}
 	.pagination .page-item .page-link {
@@ -724,7 +731,7 @@
 }
 
 @media (max-width: 375px) {
-	.col-6{
+	.col-6 {
 		width: 70% !important;
 	}
 	.shop-details .slider-nav img {

@@ -185,11 +185,11 @@ const BlogDetails = () => {
 									</li>
 									<li>
 										<Link
-											href="https://twitter.com"
-											aria-label="Twitter"
+											href="https://assetstore.unity.com/"
+											aria-label="Unity"
 											className="d-center"
 										>
-											<i className="fab fa-twitter"></i>
+											<i className="fab fa-unity"></i>
 										</Link>
 									</li>
 								</ul>
@@ -525,11 +525,11 @@ const BlogDetails = () => {
 										</li>
 										<li>
 											<Link
-												href="https://twitter.com"
-												aria-label="Twitter"
+												href="https://assetstore.unity.com/"
+												aria-label="Unity"
 												className="d-center"
 											>
-												<i className="fab fa-twitter"></i>
+												<i className="fab fa-unity"></i>
 											</Link>
 										</li>
 									</ul>

@@ -13,51 +13,51 @@ import Team from "@/components/home-3/Team";
 import Testimonial from "@/components/home-3/Testimonial";
 
 const page = () => {
-  return (
-    <>
-      {/* <!-- Banner-section end --> */}
-      <Banner />
-      {/* <!-- About block section start --> */}
-      <About />
-      {/* <!-- About block section end --> */}
+	return (
+		<>
+			{/* <!-- Banner-section end --> */}
+			<Banner />
+			{/* <!-- About block section start --> */}
+			<About />
+			{/* <!-- About block section end --> */}
 
-      {/* <!-- Features Games start --> */}
-      <FeaturedGames />
-      {/* <!-- Features Games end --> */}
+			{/* <!-- Features Games start --> */}
+			<FeaturedGames />
+			{/* <!-- Features Games end --> */}
 
-      {/* <!-- Our Services start --> */}
-      <Service />
-      {/* <!-- Our Services end --> */}
+			{/* <!-- Our Services start --> */}
+			<Service />
+			{/* <!-- Our Services end --> */}
 
-      {/* <!-- All Games start --> */}
-      <AllGames />
-      {/* <!-- All Games end --> */}
+			{/* <!-- All Games start --> */}
+			<AllGames />
+			{/* <!-- All Games end --> */}
 
-      {/* <!-- Recently Completed start --> */}
-      <Recent />
-      {/* <!-- Recently Completed end --> */}
+			{/* <!-- Recently Completed start --> */}
+			{/* <Recent /> */}
+			{/* <!-- Recently Completed end --> */}
 
-      {/* <!-- Gaming Character start --> */}
-      <Character />
-      {/* <!-- Gaming Character end --> */}
+			{/* <!-- Gaming Character start --> */}
+			<Character />
+			{/* <!-- Gaming Character end --> */}
 
-      {/* <!-- our Teams start --> */}
-      <Team />
-      {/* <!-- our Teams end --> */}
+			{/* <!-- our Teams start --> */}
+			<Team />
+			{/* <!-- our Teams end --> */}
 
-      {/* <!-- Testimonial start --> */}
-      <Testimonial />
-      {/* <!-- Testimonial end --> */}
+			{/* <!-- Testimonial start --> */}
+			<Testimonial />
+			{/* <!-- Testimonial end --> */}
 
-      {/* <!-- Blogs start --> */}
-      <Blog />
-      {/* <!-- Blogs end --> */}
+			{/* <!-- Blogs start --> */}
+			<Blog />
+			{/* <!-- Blogs end --> */}
 
-      {/* <!-- Instagram post start --> */}
-      <InstagramPost />
-      {/* <!-- Instagram post end --> */}
-    </>
-  );
+			{/* <!-- Instagram post start --> */}
+			<InstagramPost />
+			{/* <!-- Instagram post end --> */}
+		</>
+	);
 };
 
 export default page;

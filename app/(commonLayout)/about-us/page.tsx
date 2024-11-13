@@ -14,37 +14,37 @@ import Testimonials from "@/components/home-1/Testimonials";
 import React from "react";
 
 const page = () => {
-  return (
-    <>
-      {/* Banner */}
-      <Banner />
-      {/* About */}
-      <About />
-      {/* Values */}
-      <Values />
-      {/* Team */}
-      <Team />
-      {/* Counter */}
-      <div className="pb-120">
-        <Counter />
-      </div>
+	return (
+		<>
+			{/* Banner */}
+			<Banner />
+			{/* About */}
+			<About />
+			{/* Values */}
+			<Values />
+			{/* Team */}
+			<Team />
+			{/* Counter */}
+			<div className="pb-120">
+				<Counter />
+			</div>
 
-      {/* Focus section */}
-      <Focus />
-      {/* Story */}
-      <Story />
-      {/* call to action */}
-      <CallToAction />
-      {/* jobs */}
-      <Jobs />
-      {/* Testimonial */}
-      <Testimonials />
-      {/* Partnar section */}
-      <Partner />
-      {/* Instagram */}
-      <InstagramPost />
-    </>
-  );
+			{/* Focus section */}
+			<Focus />
+			{/* Story */}
+			<Story />
+			{/* call to action */}
+			<CallToAction />
+			{/* jobs */}
+			<Jobs />
+			{/* Testimonial */}
+			{/* <Testimonials /> */}
+			{/* Partnar section */}
+			<Partner />
+			{/* Instagram */}
+			<InstagramPost />
+		</>
+	);
 };
 
 export default page;

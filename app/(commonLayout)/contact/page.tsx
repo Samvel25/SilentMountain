@@ -7,22 +7,22 @@ import InstagramPost from "@/components/home-3/InstagramPost";
 import React from "react";
 
 const page = () => {
-  return (
-    <>
-      {/*   Banner  */}
-      <Banner />
-      {/* Contact form */}
-      <Contact />
-      {/* Map  */}
-      <Map />
-      {/* Faq */}
-      <Faq />
-      {/* Partners */}
-      <Partner />
-      {/* Instagram posts */}
-      <InstagramPost />
-    </>
-  );
+	return (
+		<>
+			{/*   Banner  */}
+			<Banner />
+			{/* Contact form */}
+			<Contact />
+			{/* Map  */}
+			{/* <Map /> */}
+			{/* Faq */}
+			{/* <Faq /> */}
+			{/* Partners */}
+			{/* <Partner /> */}
+			{/* Instagram posts */}
+			{/* <InstagramPost /> */}
+		</>
+	);
 };
 
 export default page;
