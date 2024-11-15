@@ -19,20 +19,21 @@ const Footer = () => {
 	return (
 		<footer className="footer-section index-two">
 			<div className="container pt-15">
-				<div className="row footer-wrapper gap-8 px-4 px-sm-6 pt-120 pb-120">
+				<div className="row footer-wrapper gap-8 px-4 px-sm-6 pt-70 pb-70">
 					<div className="col-xl-4 col-md-5">
 						<div className="single-box visible-from-bottom">
 							<Link href="/">
 								{/* <Image src={logoText} className="logo" alt="logo" /> */}
-								<h5>Silent Mountain</h5>
+								<h5>TOOFstone</h5>
 							</Link>
 							<p className="mt-4 mb-6">
-								We are technical agency that builds digital products for
+								We are a technical agency that builds digital products for
 								businesses worldwide
 							</p>
 							<ul className="d-flex gap-4 social-area">
 								<li>
 									<Link
+										target="_blank"
 										href="https://www.facebook.com"
 										aria-label="Facebook"
 										className="d-center"
@@ -42,6 +43,7 @@ const Footer = () => {
 								</li>
 								<li>
 									<Link
+										target="_blank"
 										href="https://www.instagram.com"
 										aria-label="Instagram"
 										className="d-center"
@@ -51,6 +53,7 @@ const Footer = () => {
 								</li>
 								<li>
 									<Link
+										target="_blank"
 										href="https://www.linkedin.com"
 										aria-label="Linkedin"
 										className="d-center"
@@ -60,6 +63,7 @@ const Footer = () => {
 								</li>
 								<li>
 									<Link
+										target="_blank"
 										href="https://assetstore.unity.com/"
 										aria-label="Unity"
 										className="d-center"

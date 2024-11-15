@@ -14,12 +14,12 @@ const About = () => {
 				<Image src={ellipse8} className="shape-2" alt="icon" />
 			</div>
 			<div className="container">
-				<div className="row justify-content-between align-items-center">
-					<div className="col-xxl-6 col-lg-6 order-1 order-lg-0">
+				<div className="row justify-content-center align-items-center">
+					{/* <div className="col-xxl-6 col-lg-6 order-1 order-lg-0">
 						<div className="sec-img mw-100 position-relative d-center">
-							<Image src={aboutBlock} alt="sec-img" />
-							{/* <div className="experience second p-2 p-lg-4 position-absolute top-0 start-0"> */}
-							{/* <div className="experience-wrap p-3 px-lg-5 py-lg-8 d-grid d-center gap-1">
+							<Image src={aboutBlock} alt="sec-img" /> */}
+					{/* <div className="experience second p-2 p-lg-4 position-absolute top-0 start-0"> */}
+					{/* <div className="experience-wrap p-3 px-lg-5 py-lg-8 d-grid d-center gap-1">
                   <div className="counters d-center">
                     <h2>
                       <CounterElement
@@ -35,8 +35,8 @@ const About = () => {
                     Game launched
                   </span>
                 </div> */}
-							{/* </div> */}
-							{/* <div className="experience p-2 p-lg-4 position-absolute bottom-0 end-0">
+					{/* </div> */}
+					{/* <div className="experience p-2 p-lg-4 position-absolute bottom-0 end-0">
 								<div className="experience-wrap p-3 px-lg-5 py-lg-8 d-grid d-center gap-1">
 									<div className="counters d-center">
 										<h2>
@@ -51,9 +51,9 @@ const About = () => {
 									</span>
 								</div>
 							</div> */}
-						</div>
-					</div>
-					<div className="col-xxl-5 col-lg-6">
+					{/* </div>
+					</div> */}
+					<div className="col-xxl-9 col-lg-9 col-12">
 						<div className="section-text">
 							<h4 className="sub-title">
 								The Ultimate <span>Gaming Destination</span>
@@ -62,14 +62,9 @@ const About = () => {
 								Experience the magic of <span>Silent Mountain</span> Game
 								Studios
 							</span>
-							<p>
-								As Silent Mountain, we continue to open doors to new worlds
-								every day and we are working excitedly for creating new games
-								and unique ideas!
-							</p>
 						</div>
-						<div className="row">
-							<div className="col-sm-6">
+						<div className="row justify-content-around">
+							<div className="col-sm-5">
 								<div className="counter-item mb-8 pb-4">
 									<h4 className="mb-3">Playing Worldwide</h4>
 									<span className="name-area fs-seven">
@@ -80,7 +75,7 @@ const About = () => {
 									</span>
 								</div>
 							</div>
-							<div className="col-sm-6">
+							<div className="col-sm-5">
 								<div className="counter-item mb-8 pb-4">
 									<h4 className="mb-3">Crafted with Dedication</h4>
 									<span className="name-area fs-seven">
@@ -90,7 +85,7 @@ const About = () => {
 									</span>
 								</div>
 							</div>
-							<div className="col-sm-6">
+							<div className="col-sm-5">
 								<div className="counter-item mb-8 pb-4">
 									<h4 className="mb-3">Transparent Communication</h4>
 									<span className="name-area fs-seven">
@@ -100,7 +95,7 @@ const About = () => {
 									</span>
 								</div>
 							</div>
-							<div className="col-sm-6">
+							<div className="col-sm-5">
 								<div className="counter-item mb-8 pb-4">
 									<h4 className="mb-3">Encouraging Creativity</h4>
 									<span className="name-area fs-seven">

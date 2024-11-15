@@ -1,7 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
 import Recent from "@/components/home-2/RecentDynamic";
-import Counter from "@/components/service-1/CounterDynamic";
+import Counter from "@/components/service-1/Counter";
 import Contact from "@/components/home-1/Contact";
 import Testimonials from "@/components/home-1/Testimonials";
 import React from "react";
@@ -64,14 +64,14 @@ const Page = () => {
 			<Fundamental benefits={serviceContent.details.benefits} />
 
 			{/* <!-- Counter section --> */}
-			<Counter counters={counters} />
+			<Counter />
 
 			{/* Recent Projects */}
-			<Recent
+			{/* <Recent
 				title="Recent Projects"
 				description="Check out our latest projects"
 				projects={serviceContent.details.recentProjects}
-			/>
+			/> */}
 
 			{/* <!-- Testimonials --> */}
 			<Testimonials testimonials={testimonials} />

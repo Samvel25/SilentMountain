@@ -35,7 +35,9 @@ const AllGames = () => {
 								Crafting Unforgettable <span>Gaming Experiences</span>
 							</h4> */}
 							<span className="fs-two heading mb-6">
-								Our work reflects our meticulous nature and strong dedication
+								Our work reflects our{" "}
+								<span className="text-green"> meticulous nature </span> and{" "}
+								<span className="text-green"> strong dedication </span>
 							</span>
 							{/* <p>
 								Our projects feature unique mechanics, fine-tuned game play, and

@@ -2,12 +2,16 @@
 	// --body-font: "Inter", sans-serif;
 	// --head-font: "Chakra Petch", sans-serif;
 
-	--danger-color: #ED5050;
-	--success-color: #3FCA90;
-	--warning-color: #EDCB50;
-	--info-color: #3F7FCA;
+	--danger-color: #ed5050;
+	--success-color: #3fca90;
+	--warning-color: #edcb50;
+	--info-color: #3f7fca;
 
-	--gradient-one-color: linear-gradient(179.33deg, rgba(9, 146, 106, 0) 5%, #09926A 90%);
+	--gradient-one-color: linear-gradient(
+		179.33deg,
+		rgba(9, 146, 106, 0) 5%,
+		#09926a 90%
+	);
 	--box-shadow-one: 0px 4px 4px rgba(19, 40, 34, 0.2);
 
 	--p50: #e7fef7;
@@ -100,8 +104,19 @@ h5,
 h5 > a,
 h6,
 h6 > a,
-.display-one, .display-two, .display-three, .display-four, .display-five, .display-six,
-.heading, .heading-one, .heading-two, .heading-three, .heading-four, .heading-five, .heading-six{
+.display-one,
+.display-two,
+.display-three,
+.display-four,
+.display-five,
+.display-six,
+.heading,
+.heading-one,
+.heading-two,
+.heading-three,
+.heading-four,
+.heading-five,
+.heading-six {
 	font-family: var(--head-font);
 	color: var(--n0);
 	font-weight: 700;
@@ -110,7 +125,7 @@ h6 > a,
 	display: block;
 	text-transform: capitalize;
 	transition: all 0.3s;
-	span{
+	span {
 		font-size: inherit;
 		font-family: inherit;
 		color: var(--p300);
@@ -124,7 +139,8 @@ a {
 	outline: none;
 	color: var(--n50);
 	transition: 0.3s;
-	&:focus, &:hover {
+	&:focus,
+	&:hover {
 		text-decoration: none;
 		outline: none;
 		color: var(--n0);
@@ -146,7 +162,7 @@ a {
 }
 
 // Circle Text
-.circle-text{
+.circle-text {
 	width: 225px;
 	height: 225px;
 	border-radius: 50%;
@@ -157,15 +173,15 @@ a {
 	justify-content: center;
 	position: relative;
 	border-radius: 50%;
-	.text{
+	.text {
 		animation: rotate 50s linear infinite;
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		p{
+		p {
 			transform: translate(50%, 15px);
 		}
-		span{
+		span {
 			position: absolute;
 			color: var(--n800);
 			font-weight: 600;
@@ -173,12 +189,12 @@ a {
 			transform-origin: 0 100px;
 		}
 	}
-	.box-style.btn-box-second{
+	.box-style.btn-box-second {
 		background-color: var(--n0);
 		border: 1px solid var(--p400);
 		width: 140px;
 		height: 140px;
-		i{
+		i {
 			color: var(--p300);
 		}
 	}
@@ -186,37 +202,37 @@ a {
 
 // circle box hover
 .box-style {
-    position: relative;
-    overflow: hidden;
+	position: relative;
+	overflow: hidden;
 	display: flex;
-    height: 170px;
-    width: 170px;
+	height: 170px;
+	width: 170px;
 	font-weight: 600;
 	transition: all 0.3s;
 	z-index: 0;
 	border-radius: 50%;
-    &:hover {
+	&:hover {
 		color: var(--n700);
-        &::before {
-            width: 300%;
-            height: 300%;
-        }
-    }
-    &::before {
-        content: '';
-        position: absolute;
-        top: var(--y);
-        left: var(--x);
-        transform: translate(-50%, -50%);
-        width: 0;
-        height: 0;
-        border-radius: 100%;
-        background-color: var(--p300);
-        transition: all 0.7s ease;
-        z-index: -1;
-    }
+		&::before {
+			width: 300%;
+			height: 300%;
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: var(--y);
+		left: var(--x);
+		transform: translate(-50%, -50%);
+		width: 0;
+		height: 0;
+		border-radius: 100%;
+		background-color: var(--p300);
+		transition: all 0.7s ease;
+		z-index: -1;
+	}
 
-	&.btn-box{
+	&.btn-box {
 		padding: 13px 25px;
 		display: inline-flex;
 		background-color: var(--p300);
@@ -224,27 +240,27 @@ a {
 		height: initial;
 		font-weight: 600;
 		border-radius: 16px;
-		&:hover{
+		&:hover {
 			color: var(--n0);
-			&:before{
+			&:before {
 				border-radius: 15px;
 				background-color: var(--p500);
 			}
 		}
 	}
-	&.btn-box-second{
+	&.btn-box-second {
 		height: 110px;
 		width: 110px;
 		background-color: var(--p300);
 		color: var(--n800);
-		&:hover{
+		&:hover {
 			color: var(--n0);
-			&:before{
+			&:before {
 				background-color: var(--p500);
 			}
 		}
 	}
-	&.btn-box-third{
+	&.btn-box-third {
 		padding: 13px 25px;
 		display: inline-flex;
 		background-color: transparent;
@@ -254,43 +270,43 @@ a {
 		font-weight: 600;
 		border-radius: 16px;
 		color: var(--n0);
-		&:hover{
+		&:hover {
 			border-color: transparent;
-			&:before{
+			&:before {
 				border-radius: 15px;
 				background-color: var(--p500);
 			}
 		}
 	}
-	&.box-first{
+	&.box-first {
 		width: initial;
 		height: initial;
 		flex-direction: column;
 		border-radius: 0;
 		background-color: transparent;
-		&:before{
+		&:before {
 			background-color: transparent;
 		}
-		&:hover{
-			&:before{
+		&:hover {
+			&:before {
 				background-color: var(--n700);
 				border-radius: 0;
 			}
 		}
 	}
-	&.box-second{
+	&.box-second {
 		width: initial;
 		height: initial;
-        border-top: 1px solid var(--n700);
-        border-bottom: 1px solid var(--n700);
-        border-radius: 0;
+		border-top: 1px solid var(--n700);
+		border-bottom: 1px solid var(--n700);
+		border-radius: 0;
 		background-color: transparent;
-		&:before{
+		&:before {
 			background-color: transparent;
 		}
-		&:hover{
+		&:hover {
 			border-color: transparent;
-			&:before{
+			&:before {
 				background-color: var(--n800);
 				border-radius: 12px;
 			}
@@ -298,41 +314,41 @@ a {
 	}
 }
 
-// Social Area 
-.social-area{
-	a{
+// Social Area
+.social-area {
+	a {
 		width: 30px;
 		height: 30px;
 		border: 1px solid var(--n500);
 		border-radius: 15px;
 		transition: 0.3s all;
-		i{
+		i {
 			color: var(--p300);
 		}
-		&:hover{
+		&:hover {
 			background-color: var(--p400);
-			i{
+			i {
 				color: var(--n0);
 			}
 		}
 	}
 }
 
-// Btn Style 
+// Btn Style
 .btn-base {
-    color: var(--p300);
-    border: 2px solid var(--n0);
-    line-height: 53px;
-    line-height: 55px;
-    padding: 0 38px;
-    border-radius: 0;
-    overflow: hidden;
-    position: relative;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    font-weight: 500;
-    border-radius: 4px;
-    z-index: 0;
+	color: var(--p300);
+	border: 2px solid var(--n0);
+	line-height: 53px;
+	line-height: 55px;
+	padding: 0 38px;
+	border-radius: 0;
+	overflow: hidden;
+	position: relative;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	font-weight: 500;
+	border-radius: 4px;
+	z-index: 0;
 	overflow: hidden;
 	&::after {
 		background: var(--p300);
@@ -350,7 +366,8 @@ a {
 		will-change: transform;
 		z-index: -1;
 	}
-	&:hover, &:focus{
+	&:hover,
+	&:focus {
 		border-color: transparent;
 		overflow: hidden;
 		color: #fff;
@@ -365,9 +382,9 @@ a {
 }
 
 // Mouse Follower
-.mouse-follower{
+.mouse-follower {
 	z-index: 10;
-	span{
+	span {
 		z-index: 10;
 		opacity: 1;
 		top: -10px;
@@ -378,7 +395,7 @@ a {
 		transition: 100ms ease-in-out;
 		pointer-events: none;
 	}
-	.cursor-outline{
+	.cursor-outline {
 		height: 30px;
 		width: 30px;
 		border: 1px solid var(--p300);
@@ -388,8 +405,8 @@ a {
 		width: 6px;
 		background: var(--p300);
 	}
-	&.hide-cursor{
-		span{
+	&.hide-cursor {
+		span {
 			border-color: transparent;
 			background: transparent;
 		}
@@ -414,7 +431,7 @@ ol {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-	li{
+	li {
 		font-size: inherit;
 	}
 }
@@ -448,13 +465,14 @@ button {
 	}
 }
 
-// single input 
-.single-input{
+// single input
+.single-input {
 	margin-bottom: 16px;
-	.nice-select{
+	.nice-select {
 		border: 1px solid var(--n500);
 		padding: 15px 20px;
-		&:focus, &:hover {
+		&:focus,
+		&:hover {
 			border: 1px solid var(--n500);
 		}
 		.list {
@@ -484,7 +502,7 @@ textarea {
 		color: var(--n500);
 		font-size: 16px;
 	}
-	&:focus{
+	&:focus {
 		outline: none;
 		box-shadow: none;
 		border: 1px solid var(--p300);
@@ -637,17 +655,25 @@ li {
 	line-height: 24px;
 }
 
-.alt-bg{
-	a, p, span, h1, h2, h3, h4, h5, h6{
+.alt-bg {
+	a,
+	p,
+	span,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		color: var(--n800);
 	}
 }
 
-li{
+li {
 	font-size: inherit;
 }
 
-.d-center{
+.d-center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -661,11 +687,11 @@ li{
 	margin-bottom: 55px;
 }
 
-.cus-mar{
+.cus-mar {
 	margin-bottom: -24px;
 }
 
-.single-box{
+.single-box {
 	margin-bottom: 24px;
 }
 
@@ -693,10 +719,19 @@ li{
 	padding-top: 120px;
 }
 
+.pt-70 {
+	padding-top: 70px;
+}
+
 @media (max-width: 991px) {
 	.pt-120 {
 		padding-top: 60px;
 	}
+
+	.pt-70 {
+		padding-top: 35px;
+	}
+
 	.header-section {
 		box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
 	}
@@ -706,15 +741,26 @@ li{
 	.pt-120 {
 		padding-top: 50px;
 	}
+
+	.pt-70 {
+		padding-top: 30px;
+	}
 }
 
 .pb-120 {
 	padding-bottom: 120px;
 }
 
+.pb-70 {
+	padding-bottom: 70px;
+}
+
 @media (max-width: 991px) {
 	.pb-120 {
 		padding-bottom: 60px;
+	}
+	.pb-70 {
+		padding-bottom: 35px;
 	}
 }
 
@@ -722,9 +768,12 @@ li{
 	.pb-120 {
 		padding-bottom: 50px;
 	}
+	.pb-70 {
+		padding-bottom: 30px;
+	}
 }
 
-// Custom Dropdown 
+// Custom Dropdown
 *::-webkit-scrollbar-track {
 	background: var(--p300);
 }
@@ -737,12 +786,12 @@ li{
 *::-webkit-scrollbar-thumb {
 	background: var(--p500);
 }
-.cus-scrollbar{
-    overflow-y: auto;
-    overflow-x: hidden;
-    position: sticky;
-    max-height: 90vh;
-    top: 100px;
+.cus-scrollbar {
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: sticky;
+	max-height: 90vh;
+	top: 100px;
 	&::-webkit-scrollbar-track {
 		background: transparent;
 	}
@@ -754,7 +803,7 @@ li{
 	&::-webkit-scrollbar-thumb {
 		background-color: transparent;
 	}
-	&:hover{
+	&:hover {
 		&::-webkit-scrollbar {
 			width: 3px;
 		}
@@ -768,7 +817,7 @@ li{
 	}
 }
 
-// Scroll To Top 
+// Scroll To Top
 .scrollToTop {
 	position: fixed;
 	bottom: 0;
@@ -785,8 +834,8 @@ li{
 		bottom: 120px;
 		transform: translateY(0%) rotate(-90deg);
 	}
-	&::before{
-		content: '';
+	&::before {
+		content: "";
 		position: absolute;
 		width: 40px;
 		height: 1px;
@@ -851,18 +900,18 @@ li{
 	align-items: center;
 	justify-content: center;
 	z-index: 1;
-	&:hover{
+	&:hover {
 		border-color: var(--p300);
 		box-shadow: var(--box-shadow-one);
-		i{
+		i {
 			color: var(--n900);
 		}
 	}
-    i {
+	i {
 		color: var(--n0);
 		font-size: 24px;
 		transition: 0.1s;
-    }
+	}
 	&.arafat-prev {
 		left: calc(50% - 60px);
 		transform: rotate(180deg);
@@ -870,7 +919,7 @@ li{
 	&.arafat-next {
 		right: calc(50% - 60px);
 	}
-	&.top-right{
+	&.top-right {
 		bottom: initial;
 		left: initial;
 		top: -120px;
@@ -881,7 +930,7 @@ li{
 			right: 0;
 		}
 	}
-	&.bottom-right{
+	&.bottom-right {
 		width: 35px;
 		height: 35px;
 		bottom: 32px;
@@ -893,8 +942,8 @@ li{
 		&.arafat-next {
 			right: 32px;
 		}
-		&:hover{
-			i{
+		&:hover {
+			i {
 				color: var(--n0);
 			}
 		}
@@ -978,7 +1027,7 @@ li{
 			opacity: 0;
 			left: -20px;
 		}
-		span{
+		span {
 			font-size: inherit;
 		}
 	}
@@ -1012,7 +1061,8 @@ li{
 	border-radius: 10px;
 	height: 100%;
 	width: 100%;
-	&:focus, &:hover {
+	&:focus,
+	&:hover {
 		border-color: transparent;
 	}
 	&::after {
@@ -1053,7 +1103,7 @@ li{
 	&:hover input ~ .checkmark {
 		background-color: transparent;
 	}
-	&.checkbox{
+	&.checkbox {
 		.checkmark {
 			border-radius: 0;
 			&::after {
@@ -1101,19 +1151,20 @@ li{
 	border-radius: 10px;
 	background-color: transparent;
 	border: 1px solid var(--n600);
-	&:focus-within{
+	&:focus-within {
 		outline: 1px solid var(--p300);
 		border-color: transparent;
 	}
-	&.second{
+	&.second {
 		padding: 6px 10px;
 		background-color: transparent;
 		border: 1px solid var(--n500);
-		input{
+		input {
 			font-size: 16px;
 		}
 	}
-	input, textarea {
+	input,
+	textarea {
 		border-radius: 0;
 		padding: 0;
 		padding-right: 15px;
@@ -1122,7 +1173,7 @@ li{
 	}
 }
 
-// Animation Start 
+// Animation Start
 @keyframes rotate {
 	100% {
 		transform: rotate(360deg);
@@ -1145,14 +1196,14 @@ li{
 	100% {
 		clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
 	}
-  }
+}
 
 @keyframes leftToRight {
-	0%{
-	   transform: rotateY(0deg);
+	0% {
+		transform: rotateY(0deg);
 	}
-   100%{
-	   transform: rotateY(360deg);
+	100% {
+		transform: rotateY(360deg);
 	}
 }
 
@@ -1181,25 +1232,27 @@ li{
 
 @keyframes loading {
 	0% {
-	  -webkit-transform: rotate(0deg);
-	  transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
 	}
 	100% {
-	  -webkit-transform: rotate(180deg);
-	  transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
 	}
 }
 
 @keyframes rotation {
-	100%{ transform:rotatey(360deg); }
+	100% {
+		transform: rotatey(360deg);
+	}
 }
 
 @keyframes spin {
 	from {
-	  transform: rotate(0deg);
+		transform: rotate(0deg);
 	}
 	to {
-	  transform: rotate(360deg);
+		transform: rotate(360deg);
 	}
 }
 @keyframes ripple2Ani {
@@ -1218,13 +1271,13 @@ li{
 }
 @keyframes stretch {
 	0% {
-	  transform: scale(0.8, 0.8);
+		transform: scale(0.8, 0.8);
 	}
 	50% {
-	  transform: scale(1.1, 1.1);
+		transform: scale(1.1, 1.1);
 	}
 	100% {
-	  transform: scale(0.8, 0.8);
+		transform: scale(0.8, 0.8);
 	}
 }
 @keyframes rippleAni {

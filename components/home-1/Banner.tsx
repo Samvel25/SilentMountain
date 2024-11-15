@@ -84,7 +84,7 @@ const Banner = () => {
 											/>
 										</span>
 										<p className="fs-four">
-											We are technical agency that builds digital products for
+											We are a technical agency that builds digital products for
 											businesses worldwide
 										</p>
 									</div>

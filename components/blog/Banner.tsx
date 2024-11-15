@@ -15,7 +15,9 @@ const Banner = () => {
 						<div className="main-content">
 							<h2 className="visible-slowly-bottom display-four mb-6">
 								<span>
-									Our insights and perspectives within the game industry
+									Our <span className="text-green"> insights and </span>
+									<span className="text-green"> perspectives </span>within the
+									game industry
 								</span>
 							</h2>
 							{/* <p className="fs-four">

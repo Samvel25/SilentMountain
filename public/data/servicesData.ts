@@ -85,13 +85,21 @@ export const services = [
 			],
 			recentProjects: [
 				{
-					image: "/images/project-1.png",
+					// image: {
+					// 	src: "/images/project-1.png",
+					// 	width: 800,
+					// 	height: 600,
+					// },
 					title: "Project Alpha",
 					description: "An innovative 3D game with stunning graphics.",
 					link: "/projects/alpha",
 				},
 				{
-					image: "/images/project-2.png",
+					// image: {
+					// 	src: "/images/project-2.png",
+					// 	width: 800,
+					// 	height: 600,
+					// },
 					title: "Project Beta",
 					description: "A captivating 2D platformer with engaging gameplay.",
 					link: "/projects/beta",
@@ -105,13 +113,13 @@ export const services = [
 					location: "USA",
 					date: "Mar 22, 2023",
 				},
-				{
-					image: { customer1 },
-					text: "The graphics in their games are always top-notch and truly bring the world to life.",
-					name: "Kristin Watson",
-					location: "United Kingdom",
-					date: "Mar 22, 2023",
-				},
+				// {
+				// 	image: { customer1 },
+				// 	text: "The graphics in their games are always top-notch and truly bring the world to life.",
+				// 	name: "Kristin Watson",
+				// 	location: "United Kingdom",
+				// 	date: "Mar 22, 2023",
+				// },
 			],
 		},
 	},
@@ -192,26 +200,34 @@ export const services = [
 			],
 			recentProjects: [
 				{
-					image: "/images/ar-vr-project-1.png",
+					// image: {
+					// 	src: "/images/ar-vr-project-1.png",
+					// 	width: 800,
+					// 	height: 600,
+					// },
 					title: "Virtual Museum Tour",
 					description: "An interactive VR tour of a historical museum.",
 					link: "/projects/virtual-museum",
 				},
 				{
-					image: "/images/ar-vr-project-2.png",
+					// image: {
+					// 	src: "/images/ar-vr-project-2.png",
+					// 	width: 800,
+					// 	height: 600,
+					// },
 					title: "AR Shopping Experience",
 					description: "An augmented reality app for virtual shopping.",
 					link: "/projects/ar-shopping",
 				},
 			],
 			testimonials: [
-				{
-					image: { customer1 },
-					text: "Their team is incredibly skilled and easy to work with.",
-					name: "Jordyn Septimus",
-					location: "United Kingdom",
-					date: "May 12, 2023",
-				},
+				// {
+				// 	image: { customer1 },
+				// 	text: "Their team is incredibly skilled and easy to work with.",
+				// 	name: "Jordyn Septimus",
+				// 	location: "United Kingdom",
+				// 	date: "May 12, 2023",
+				// },
 				{
 					image: { customer1 },
 					text: "Silent Mountain’s leadership has deep experience in engineering management, which is part of the reason they’ve been so reliable in pairing our projects with exactly the right developers. They took the time to understand what we needed to hit the ground running fast (and on budget) and have made our outsourcing process remarkably easy and efficient.",
@@ -295,27 +311,35 @@ export const services = [
 			],
 			recentProjects: [
 				{
-					image: "/images/mobile-app-project-1.png",
+					// image: {
+					// 	src: "/images/mobile-app-project-1.png",
+					// 	width: 800,
+					// 	height: 600,
+					// },
 					title: "Fitness Tracker App",
 					description:
 						"A comprehensive app for tracking fitness activities and goals.",
 					link: "/projects/fitness-tracker",
 				},
 				{
-					image: "/images/mobile-app-project-2.png",
+					// image: {
+					// 	src: "/images/mobile-app-project-2.png",
+					// 	width: 800,
+					// 	height: 600,
+					// },
 					title: "E-commerce App",
 					description: "A user-friendly app for seamless online shopping.",
 					link: "/projects/e-commerce",
 				},
 			],
 			testimonials: [
-				{
-					image: { customer1 },
-					text: "Their mobile app development services exceeded our expectations.",
-					name: "Bessie Cooper",
-					location: "United States",
-					date: "Nov 25, 2023",
-				},
+				// {
+				// 	image: { customer1 },
+				// 	text: "Their mobile app development services exceeded our expectations.",
+				// 	name: "Bessie Cooper",
+				// 	location: "United States",
+				// 	date: "Nov 25, 2023",
+				// },
 
 				{
 					image: { customer1 },
@@ -403,14 +427,22 @@ export const services = [
 			],
 			recentProjects: [
 				{
-					image: "/images/web-app-project-1.png",
+					// image: {
+					// 	src: "/images/web-app-project-1.png",
+					// 	width: 800,
+					// 	height: 600,
+					// },
 					title: "Online Learning Platform",
 					description:
 						"A scalable platform for delivering online courses and training.",
 					link: "/projects/online-learning",
 				},
 				{
-					image: "/images/web-app-project-2.png",
+					// image: {
+					// 	src: "/images/web-app-project-2.png",
+					// 	width: 800,
+					// 	height: 600,
+					// },
 					title: "Corporate Intranet",
 					description:
 						"A secure intranet solution for internal communication and collaboration.",
@@ -418,13 +450,13 @@ export const services = [
 				},
 			],
 			testimonials: [
-				{
-					image: { customer1 },
-					text: "The app they developed for us is fast, reliable, and user-friendly.",
-					name: "Chris Evans",
-					location: "Australia",
-					date: "Jan 18, 2023",
-				},
+				// {
+				// 	image: { customer1 },
+				// 	text: "The app they developed for us is fast, reliable, and user-friendly.",
+				// 	name: "Chris Evans",
+				// 	location: "Australia",
+				// 	date: "Jan 18, 2023",
+				// },
 				{
 					image: { customer1 },
 					text: "When looking to outsource developers for some of our projects, I was fortunate to sign with Silent Mountain. The human resources are of the highest quality. The team provides an exceptional combination of enhanced technical skills and strong communication which is something you do not always get from an external team.",

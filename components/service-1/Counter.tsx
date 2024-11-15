@@ -38,21 +38,13 @@ const Counter = () => {
 					<div className="col-sm-6 col-xl-3">
 						<div className="single-box d-grid justify-content-center">
 							<div className="counters d-center">
-								<CounterElement end={20} className="symbol display-one" />
-								<span className="display-one symbol">+</span>
-							</div>
-							<p className="name-area fs-seven">Successful Collaborations</p>
-						</div>
-					</div>
-					<div className="col-sm-6 col-xl-3">
-						<div className="single-box d-grid justify-content-center">
-							<div className="counters d-center">
 								<CounterElement end={30} className="symbol display-one" />
 								<span className="display-one symbol">+</span>
 							</div>
 							<p className="name-area fs-seven">Games Launched</p>
 						</div>
 					</div>
+
 					<div className="col-sm-6 col-xl-3">
 						<div className="single-box d-grid justify-content-center">
 							<div className="counters d-center">
@@ -62,6 +54,15 @@ const Counter = () => {
 								<span className="display-one symbol">+</span>
 							</div>
 							<p className="name-area fs-seven">Gaming Assets Delivered</p>
+						</div>
+					</div>
+					<div className="col-sm-6 col-xl-3">
+						<div className="single-box d-grid justify-content-center">
+							<div className="counters d-center">
+								<CounterElement end={20} className="symbol display-one" />
+								<span className="display-one symbol">+</span>
+							</div>
+							<p className="name-area fs-seven">Successful Collaborations</p>
 						</div>
 					</div>
 				</div>
