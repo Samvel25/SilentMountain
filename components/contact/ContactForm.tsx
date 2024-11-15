@@ -369,25 +369,22 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
 		try {
 			const response = await fetch(
-				"https://script.google.com/macros/s/AKfycbw_2jCq2lntdjIEWTjigAdzSIZgV_HoUgNc1M0NuUI88ZIH0wh8XZLFWfo0m_GMD-mXHA/exec", // Replace with your Google Apps Script URL
+				"https://script.google.com/macros/s/AKfycby4a2gW0KvhuOqkynaScPUldIUURScaO_DsZ8jTUGRfMtQ6byLIfeqaTV--bGG4ZsB6/exec", // Replace with your deployment URL
 				{
 					method: "POST",
 					headers: {
 						"Content-Type": "application/x-www-form-urlencoded",
 					},
 					body: new URLSearchParams(formData).toString(),
+					mode: "no-cors", // Add this to bypass CORS
 				}
 			);
 
-			if (response.ok) {
-				setAlertMessage("Your message has been sent successfully!");
-				setAlertType("success");
-				setFormData(initialFormData); // Reset form
-				setErrors({});
-			} else {
-				setAlertMessage("Failed to send your message. Please try again later.");
-				setAlertType("danger");
-			}
+			// You won't have access to `response` details in no-cors mode.
+			setAlertMessage("Your message has been sent successfully!");
+			setAlertType("success");
+			setFormData(initialFormData); // Reset form
+			setErrors({});
 		} catch (error) {
 			console.error("Error sending message:", error);
 			setAlertMessage("Failed to send your message. Please try again later.");
