@@ -119,6 +119,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
 			return;
 		}
 
+		// Log environment keys
+		console.log("Service ID:", process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID);
+		console.log("Template ID:", process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID);
+		console.log("Public Key:", process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+
 		const validationErrors = validateForm(formData);
 		if (Object.keys(validationErrors).length > 0) {
 			setErrors(validationErrors);
