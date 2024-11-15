@@ -369,7 +369,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
 		try {
 			const response = await fetch(
-				"https://script.google.com/macros/s/your-deployment-url/exec", // Replace with your Google Apps Script URL
+				"https://script.google.com/macros/s/AKfycbzvP7BcJfMJNbGsm7p3UBdsHs3F_J3gIcNw6xamS3UMTIkslhSWXKMJZDZVsKy-5gJG/exec", // Replace with your Google Apps Script URL
 				{
 					method: "POST",
 					headers: {
