@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import BlogSidebar from "@/components/blog/BlogSidebar";
 import { useState } from "react";
 import CommentBox from "@/components/CommentBox";
+import Banner from "@/components/blog/Banner";
 
 const BlogPost = () => {
 	const router = useRouter();
@@ -61,88 +62,101 @@ const BlogPost = () => {
 	};
 
 	return (
-		<section className="recently-completed blogs blog-section pb-120">
-			<div className="container pt-120">
-				{/* Add back button if coming from search/category */}
-				{(searchTerm || activeCategory !== "All") && (
-					<button onClick={handleBackToBlogs} className="btn btn-link mb-4">
-						← Back to search results
-					</button>
-				)}
+		<>
+			{/* Banner */}
+			<Banner />
+			<section className="recently-completed blogs blog-section pb-120">
+				<div className="container pt-120">
+					{/* Add back button if coming from search/category */}
+					{(searchTerm || activeCategory !== "All") && (
+						<button onClick={handleBackToBlogs} className="btn btn-link mb-4">
+							← Back to search results
+						</button>
+					)}
 
-				<div className="row">
-					<div className="col-xl-8 col-lg-7 service-details">
-						<div className="single-box">
-							<div className="position-relative d-grid align-items-center">
-								<div className="img-box">
-									<iframe
-										frameBorder="0"
-										src={blog.details.videoUrl}
-										allowFullScreen
-										width="975"
-										height="670"
-									></iframe>
+					<div className="row">
+						<div className="col-xl-8 col-lg-7 service-details">
+							<div className="single-box">
+								<div className="position-relative d-grid align-items-center">
+									<div className="img-box">
+										{blog.details.useIframe ? (
+											<iframe
+												frameBorder="0"
+												src={blog.details.videoUrl}
+												allowFullScreen
+												width="975"
+												height="670"
+											></iframe>
+										) : (
+											<Image
+												src={blog.details.blogImage}
+												alt={blog.title}
+												width={975}
+												height={670}
+											/>
+										)}
+									</div>
+									<p>{blog.details.mainContent.intro}</p>
 								</div>
-								<p>{blog.details.mainContent.intro}</p>
 							</div>
-						</div>
-						<div className="single-content row align-items-center mb-5">
-							<div className="col-lg-6">
-								<h4 className="mb-6">Key Points:</h4>
-								<ul className="ms-10 mb-8 d-grid gap-3 list fs-seven">
-									{blog.details.points.map((point, index) => (
-										<li key={index} className="d-flex align-items-center">
-											{point}
-										</li>
+							<div className="single-content row align-items-center mb-5">
+								<div className="col-lg-6">
+									<h4 className="mb-6">Key Points:</h4>
+									<ul className="ms-10 mb-8 d-grid gap-3 list fs-seven">
+										{blog.details.points.map((point, index) => (
+											<li key={index} className="d-flex align-items-center">
+												{point}
+											</li>
+										))}
+									</ul>
+								</div>
+								<div className="col-lg-6">
+									<div className="img-area">
+										<Image src={blog.img} alt={blog.title} />
+									</div>
+								</div>
+							</div>
+							<p>{blog.details.mainContent.conclusion}</p>
+							<div className="single-box quote mt-5 p-5 p-sm-10 alt-bg">
+								<div className="icon-box">
+									<i className="material-symbols-outlined mat-icon display-one">
+										format_quote
+									</i>
+								</div>
+								<p className="fs-four fw-bold">{blog.details.quote}</p>
+								<span className="d-center fw-bolder mt-4">
+									{blog.details.author}
+								</span>
+							</div>
+
+							<div className="single-box tag-area py-5 d-center flex-wrap gap-3 justify-content-between mt-5">
+								<p>
+									Tags:{" "}
+									{blog.tags.map((tag, index) => (
+										<span key={index} className="me-2">
+											{tag}
+											{index < blog.tags.length - 1 ? "," : ""}
+										</span>
 									))}
-								</ul>
+								</p>
 							</div>
-							<div className="col-lg-6">
-								<div className="img-area">
-									<Image src={blog.img} alt={blog.title} />
-								</div>
-							</div>
-						</div>
-						<p>{blog.details.mainContent.conclusion}</p>
-						<div className="single-box quote mt-5 p-5 p-sm-10 alt-bg">
-							<div className="icon-box">
-								<i className="material-symbols-outlined mat-icon display-one">
-									format_quote
-								</i>
-							</div>
-							<p className="fs-four fw-bold">{blog.details.quote}</p>
-							<span className="d-center fw-bolder mt-4">
-								{blog.details.author}
-							</span>
 						</div>
 
-						<div className="single-box tag-area py-5 d-center flex-wrap gap-3 justify-content-between mt-5">
-							<p>
-								Tags:{" "}
-								{blog.tags.map((tag, index) => (
-									<span key={index} className="me-2">
-										{tag}
-										{index < blog.tags.length - 1 ? "," : ""}
-									</span>
-								))}
-							</p>
+						{/* Sidebar Column */}
+						<div className="col-xl-4 col-lg-5 mt-8 mt-lg-0 service-details">
+							<BlogSidebar
+								onSearch={setSearchTerm}
+								onCategoryChange={setActiveCategory}
+								initialSearchTerm={searchTerm}
+								initialCategory={activeCategory}
+								currentBlogId={blog.id}
+								showRelatedArticles={true}
+							/>
 						</div>
-					</div>
-
-					{/* Sidebar Column */}
-					<div className="col-xl-4 col-lg-5 mt-8 mt-lg-0 service-details">
-						<BlogSidebar
-							onSearch={setSearchTerm}
-							onCategoryChange={setActiveCategory}
-							initialSearchTerm={searchTerm}
-							initialCategory={activeCategory}
-							currentBlogId={blog.id}
-							showRelatedArticles={true}
-						/>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</>
 	);
 };
 

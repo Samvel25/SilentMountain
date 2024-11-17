@@ -31,12 +31,12 @@ const Testimonial = () => {
 				<div className="row justify-content-center">
 					<div className="col-lg-6">
 						<div className="section-header text-center">
-							<h4 className="sub-title">
+							{/* <h4 className="sub-title">
+								Our <span>Testimonial</span>
+							</h4> */}
+							<h4 className="fs-two heading mb-6">
 								Our <span>Testimonial</span>
 							</h4>
-							<span className="fs-two heading mb-6">
-								Our Happy <span>Customers</span>
-							</span>
 						</div>
 					</div>
 				</div>

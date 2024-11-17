@@ -14,11 +14,9 @@ const Banner = () => {
 					<div className="col-lg-6 col-md-10">
 						<div className="main-content">
 							<h2 className="visible-slowly-bottom display-four mb-6">
-								<span>
-									Our <span className="text-green"> insights and </span>
-									<span className="text-green"> perspectives </span>within the
-									game industry
-								</span>
+								Our <span className="text-green"> insights </span> and&nbsp;
+								<span className="text-green"> perspectives </span>within the
+								game industry
 							</h2>
 							{/* <p className="fs-four">
 								Professional Game design and Development services since 1995

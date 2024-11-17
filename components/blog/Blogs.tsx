@@ -52,11 +52,25 @@ const Blogs = () => {
 						)}
 
 						{filteredBlogs.length > 0 ? (
-							filteredBlogs.map(({ id, title, img, slug }) => (
+							filteredBlogs.map(({ id, title, slug, details }) => (
 								<div key={id} className="single-box">
 									<div className="position-relative d-grid align-items-center">
 										<div className="img-box">
-											<Image src={img} className="w-100" alt={title} />
+											{details.useIframe ? (
+												<iframe
+													frameBorder="0"
+													src={details.videoUrl}
+													allowFullScreen
+													width="975"
+													height="670"
+												></iframe>
+											) : (
+												<Image
+													src={details.blogImage}
+													className="w-100"
+													alt={title}
+												/>
+											)}
 										</div>
 										<div className="position-absolute cus-position bottom-0 start-0">
 											<div className="content-box p-3 p-sm-6">

@@ -18,7 +18,7 @@ const Service = () => {
 								Bringing Your <span>Gaming Vision</span> to Life
 							</h4>
 							<span className="fs-two heading mb-6">
-								Global <span>Excellence In</span>
+								Global <span>Excellence In&nbsp;</span>
 								Game Solutions
 							</span>
 							<p>
@@ -50,19 +50,19 @@ const Service = () => {
 									className="single-box box-style box-second py-5 py-sm-8 d-flex gap-4 gap-md-6 justify-content-between align-items-center"
 								>
 									<div className="content-box">
-										<Link href={`/our-services-details/${service.id}`}>
-											<h3 className="visible-slowly-bottom mb-3">
-												{service.title}
-											</h3>
-										</Link>
+										{/* <Link href={`/our-services-details/${service.id}`}> */}
+										<h3 className="visible-slowly-bottom mb-3">
+											{service.title}
+										</h3>
+										{/* </Link> */}
 										<p>{service.description}</p>
 									</div>
-									<Link
+									{/* <Link
 										href={`/our-services-details/${service.id}`}
 										className="end-area d-center"
 									>
 										<i className="material-symbols-outlined"> call_made </i>
-									</Link>
+									</Link> */}
 								</div>
 							))}
 						</div>

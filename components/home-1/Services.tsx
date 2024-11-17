@@ -89,7 +89,7 @@ const Services = () => {
 									<h3 className="mt-6 mb-3">{service.title}</h3>
 									<p>{service.description}</p>
 									<div className="link-area mt-8">
-										<Link
+										{/* <Link
 											href={`/our-services-details/${service.id}`}
 											className="d-flex align-items-center"
 										>
@@ -97,7 +97,7 @@ const Services = () => {
 											<i className="material-symbols-outlined mat-icon">
 												arrow_right_alt
 											</i>
-										</Link>
+										</Link> */}
 									</div>
 								</div>
 							</div>
