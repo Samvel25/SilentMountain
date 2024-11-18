@@ -1,16 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { blogs } from "@/public/data/blogs";
+import { fetchBlogs } from "@/utils/api";
 import BlogSidebar from "./BlogSidebar";
 import { useSearchParams } from "next/navigation";
+import { Blog } from "@/types/types";
 
 const Blogs = () => {
 	const searchParams = useSearchParams();
-	const [searchTerm, setSearchTerm] = useState("");
+	const initialSearchTerm = searchParams?.get("search") || "";
+	const [searchTerm, setSearchTerm] = useState(initialSearchTerm);
 	const [activeCategory, setActiveCategory] = useState("All");
+	const [blogs, setBlogs] = useState<Blog[]>([]);
 
-	// Update states based on URL parameters
+	useEffect(() => {
+		const getBlogs = async () => {
+			const data = await fetchBlogs();
+			console.log("Fetched Blogs:", data);
+			setBlogs(data);
+		};
+
+		console.log("useEffect triggered");
+		getBlogs();
+	}, []);
+
 	useEffect(() => {
 		const search = searchParams?.get("search");
 		const category = searchParams?.get("category");
@@ -19,13 +32,22 @@ const Blogs = () => {
 		if (category) setActiveCategory(category);
 	}, [searchParams]);
 
-	// Filter the blogs based on active category and search term
 	const filteredBlogs = blogs.filter((blog) => {
+		const { title, description, tags } = blog;
+
 		const matchesCategory =
-			activeCategory === "All" || blog.tags.includes(activeCategory);
+			activeCategory === "All" ||
+			tags.some((tag) => tag.tags === activeCategory);
 		const matchesSearch =
-			blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-			blog.description.toLowerCase().includes(searchTerm.toLowerCase());
+			title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			description.some((desc) =>
+				desc.children.some((child) =>
+					child.text.toLowerCase().includes(searchTerm.toLowerCase())
+				)
+			);
+		console.log("useIframe:", blog.useIframe);
+		console.log("Image URL:", blog.image[0]?.formats.large.url);
+		console.log("Blog Slug:", blog.slug);
 
 		return matchesCategory && matchesSearch;
 	});
@@ -35,7 +57,6 @@ const Blogs = () => {
 			<div className="container pt-120">
 				<div className="row">
 					<div className="col-xl-8 col-lg-7">
-						{/* Show active filters if any */}
 						{(searchTerm || activeCategory !== "All") && (
 							<div className="filter-info mb-4">
 								{searchTerm && (
@@ -52,39 +73,39 @@ const Blogs = () => {
 						)}
 
 						{filteredBlogs.length > 0 ? (
-							filteredBlogs.map(({ id, title, slug, details }) => (
-								<div key={id} className="single-box">
+							filteredBlogs.map((blog) => (
+								<div key={blog.id} className="single-box">
 									<div className="position-relative d-grid align-items-center">
 										<div className="img-box">
-											{details.useIframe ? (
+											{blog.useIframe ? (
 												<iframe
 													frameBorder="0"
-													src={details.videoUrl}
+													src={blog.videoUrl}
 													allowFullScreen
 													width="975"
 													height="670"
 												></iframe>
 											) : (
-												<Image
-													src={details.blogImage}
-													className="w-100"
-													alt={title}
-												/>
+												blog.image.length > 0 && (
+													<Image
+														src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${blog.image[0].formats.large.url}`}
+														className="w-100"
+														alt={blog.title}
+														width={1000}
+														height={560}
+													/>
+												)
 											)}
 										</div>
 										<div className="position-absolute cus-position bottom-0 start-0">
 											<div className="content-box p-3 p-sm-6">
-												<div className="top-bar d-flex align-items-center gap-3">
-													{/* <h5>News</h5>
-													<span>25 January, 2023</span> */}
-												</div>
-												<Link href={`/blog/${slug}`}>
+												<Link href={`/blog/${blog.slug}`}>
 													<h3 className="visible-slowly-bottom mt-3">
-														{title}
+														{blog.title}
 													</h3>
 												</Link>
 												<Link
-													href={`/blog/${slug}`}
+													href={`/blog/${blog.slug}`}
 													className="end-area mt-8 d-center"
 												>
 													<i className="material-symbols-outlined">call_made</i>
@@ -105,6 +126,7 @@ const Blogs = () => {
 							onCategoryChange={setActiveCategory}
 							initialSearchTerm={searchTerm}
 							initialCategory={activeCategory}
+							blogs={blogs}
 						/>
 					</div>
 				</div>
