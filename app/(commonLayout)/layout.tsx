@@ -3,8 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/home-2/Footer";
 
 export const metadata: Metadata = {
-	title: "Gamestorm - Gaming studio nextjs template",
-	description: "Nextjs template for gaming studio - bootstrap",
+	title: "BabyCheese - Unity Game Studio & Asset Creator",
+	description:
+		"BabyCheese is a leading studio specializing in developing games and crafting high-quality assets for Unity. Elevate your game development with our expertise.",
 };
 
 export default function RootLayout({

@@ -50,8 +50,8 @@ const Footer = () => {
 										<i className="material-symbols-outlined"> mail </i>
 									</div>
 									<div className="text-area">
-										<span>Example@gmail.com</span>
-										<span>Example@gmail.com</span>
+										<span>babycheese.studio@gmail.com</span>
+										<span>babycheese.studio@gmail.com</span>
 									</div>
 								</div>
 							</div>
@@ -96,7 +96,7 @@ const Footer = () => {
 								<div className="copyright">
 									<p className="text-center text-md-start">
 										Copyright © {new Date().getFullYear()}{" "}
-										<Link href="/">Gamestorm</Link>- All Right Reserved
+										<Link href="/">BabyCheese</Link>- All Right Reserved
 									</p>
 								</div>
 							</div>

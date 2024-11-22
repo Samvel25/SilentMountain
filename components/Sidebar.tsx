@@ -124,7 +124,7 @@ const Sidebar = ({ sidebar, setSidebar }: sideBarProps) => {
 										Services
 									</Link>
 								</li>
-								<li>
+								{/* <li>
 									<Link
 										className="dropdown-nav fs-three heading"
 										href="/privacy-policy"
@@ -141,7 +141,7 @@ const Sidebar = ({ sidebar, setSidebar }: sideBarProps) => {
 									>
 										Terms & Conditions
 									</Link>
-								</li>
+								</li> */}
 								<li>
 									<Link
 										className="dropdown-nav fs-three heading"
@@ -163,7 +163,7 @@ const Sidebar = ({ sidebar, setSidebar }: sideBarProps) => {
 							</ul>
 						</div>
 					</div>
-					<div className="footer-items w-100 bottom-0">
+					{/* <div className="footer-items w-100 bottom-0">
 						<div className="row">
 							<div className="col-xl-3 col-lg-6">
 								<div className="single-item p-5 py-xxl-10 px-xxl-8">
@@ -233,7 +233,7 @@ const Sidebar = ({ sidebar, setSidebar }: sideBarProps) => {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>

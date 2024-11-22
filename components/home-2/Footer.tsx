@@ -24,7 +24,7 @@ const Footer = () => {
 						<div className="single-box visible-from-bottom">
 							<Link href="/">
 								{/* <Image src={logoText} className="logo" alt="logo" /> */}
-								<h5>TOOFstone</h5>
+								<h5>BabyCheese</h5>
 							</Link>
 							<p className="mt-4 mb-6">
 								We are a technical agency that builds digital products for
@@ -97,6 +97,17 @@ const Footer = () => {
 										Services
 									</Link>
 								</li>
+
+								<li>
+									<Link href="/blog" className="d-flex align-items-center">
+										Blog
+									</Link>
+								</li>
+								<li>
+									<Link href="/contact" className="d-flex align-items-center">
+										Contact
+									</Link>
+								</li>
 								<li>
 									<Link
 										href="/privacy-policy"
@@ -111,16 +122,6 @@ const Footer = () => {
 										className="d-flex align-items-center"
 									>
 										Terms & Conditions
-									</Link>
-								</li>
-								<li>
-									<Link href="/blog" className="d-flex align-items-center">
-										Blog
-									</Link>
-								</li>
-								<li>
-									<Link href="/contact" className="d-flex align-items-center">
-										Contact
 									</Link>
 								</li>
 							</ul>
@@ -176,7 +177,7 @@ const Footer = () => {
 								<div className="copyright">
 									<p>
 										Copyright © {new Date().getFullYear()}{" "}
-										<Link href="/">Gamestorm</Link> - All Right Reserved
+										<Link href="/">Babyheese</Link> - All Right Reserved
 									</p>
 								</div>
 							</div>
