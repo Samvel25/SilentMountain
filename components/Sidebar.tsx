@@ -1,13 +1,20 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Select from "react-select";
+import { useRouter } from "next/router";
 type sideBarProps = {
 	sidebar: boolean;
 	setSidebar: (open: boolean) => void;
 };
 const Sidebar = ({ sidebar, setSidebar }: sideBarProps) => {
-	// const [dropdown, setDropdown] = useState<null | number>(null);
-	// const [subMenu, setSubmenu] = useState<null | number>(null);
+	const [currentPath, setCurrentPath] = useState<string | null>(null);
+
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			setCurrentPath(window.location.pathname);
+		}
+	}, []);
+
 	const options = [
 		{ value: "English", label: "Eng" },
 		{ value: "Bangla", label: "Ban" },
@@ -99,7 +106,9 @@ const Sidebar = ({ sidebar, setSidebar }: sideBarProps) => {
 							<ul className="navbar-nav d-xl-flex gap-2 gap-md-5 py-4 py-lg-0 px-4 px-lg-0 align-self-center">
 								<li>
 									<Link
-										className="dropdown-nav fs-three heading"
+										className={`dropdown-nav fs-three heading ${
+											currentPath === "/" ? "active" : ""
+										}`}
 										href="/"
 										onClick={() => setSidebar(false)}
 									>
@@ -108,7 +117,9 @@ const Sidebar = ({ sidebar, setSidebar }: sideBarProps) => {
 								</li>
 								<li>
 									<Link
-										className="dropdown-nav fs-three heading"
+										className={`dropdown-nav fs-three heading ${
+											currentPath === "/portfolio" ? "active" : ""
+										}`}
 										href="/portfolio"
 										onClick={() => setSidebar(false)}
 									>
@@ -117,7 +128,9 @@ const Sidebar = ({ sidebar, setSidebar }: sideBarProps) => {
 								</li>
 								<li>
 									<Link
-										className="dropdown-nav fs-three heading"
+										className={`dropdown-nav fs-three heading ${
+											currentPath === "/our-services" ? "active" : ""
+										}`}
 										href="/our-services"
 										onClick={() => setSidebar(false)}
 									>
@@ -144,7 +157,9 @@ const Sidebar = ({ sidebar, setSidebar }: sideBarProps) => {
 								</li> */}
 								<li>
 									<Link
-										className="dropdown-nav fs-three heading"
+										className={`dropdown-nav fs-three heading ${
+											currentPath === "/blog" ? "active" : ""
+										}`}
 										href="/blog"
 										onClick={() => setSidebar(false)}
 									>
@@ -153,7 +168,9 @@ const Sidebar = ({ sidebar, setSidebar }: sideBarProps) => {
 								</li>
 								<li>
 									<Link
-										className="dropdown-nav fs-three heading"
+										className={`dropdown-nav fs-three heading ${
+											currentPath === "/contact" ? "active" : ""
+										}`}
 										href="/contact"
 										onClick={() => setSidebar(false)}
 									>

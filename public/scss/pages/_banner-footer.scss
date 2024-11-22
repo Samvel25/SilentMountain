@@ -414,7 +414,7 @@
 		.footer-items {
 			border-top: 1px solid var(--n300);
 			position: absolute;
-			max-height: 50vh;
+			max-height: 80vh;
 		}
 		.single-item {
 			border-right: 1px solid var(--n300);
@@ -429,7 +429,7 @@
 		}
 		.header-fixed,
 		.header-section {
-			height: 50vh;
+			height: 80vh;
 			align-items: center;
 			justify-content: center;
 			display: flex !important;
