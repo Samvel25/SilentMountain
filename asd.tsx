@@ -30,8 +30,8 @@
 // 		autoplaySpeed: 3000,
 // 		fade: false,
 // 		infinite: true,
-// 		pauseOnFocus: false,
-// 		pauseOnHover: false,
+// 		pauseOnFocus: true,
+// 		pauseOnHover: true,
 // 		arrows: false,
 // 		dots: false,
 // 		responsive: [

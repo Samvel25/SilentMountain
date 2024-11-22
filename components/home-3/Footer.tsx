@@ -96,7 +96,7 @@ const Footer = () => {
 								<div className="copyright">
 									<p className="text-center text-md-start">
 										Copyright © {new Date().getFullYear()}{" "}
-										<Link href="/">BabyCheese</Link>- All Right Reserved
+										<Link href="/">Babyheese</Link>- All Right Reserved
 									</p>
 								</div>
 							</div>

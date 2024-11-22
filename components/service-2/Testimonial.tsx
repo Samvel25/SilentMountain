@@ -10,7 +10,7 @@ const Testimonial = () => {
 		fade: false,
 		infinite: true,
 		pauseOnFocus: true,
-		pauseOnHover: false,
+		pauseOnHover: true,
 		arrows: false,
 		dots: false,
 		responsive: [
