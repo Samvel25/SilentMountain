@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import Slider, { Settings } from "react-slick";
-import { testimonials } from "@/public/data/testimonialData";
+import { services } from "@/public/data/servicesData";
+
+// Extract testimonials from the desired service
+const testimonials =
+	services.find((service) => service.id === "game-development")?.details
+		.testimonials || [];
 
 const Testimonial = () => {
 	const settings: Settings = {
@@ -35,7 +40,13 @@ const Testimonial = () => {
 								<div className="slide-area" key={index}>
 									<div className="single-slider text-center">
 										<div className="img-box">
-											<Image src={testimonial.image} alt="Image" />
+											<Image
+												src={testimonial.image}
+												width={80}
+												height={80}
+												className="rounded-circle"
+												alt="Image"
+											/>
 										</div>
 										<div className="star-area pt-3 pt-md-6 pb-4 pb-md-8">
 											{[...Array(5)].map((_, i) => (

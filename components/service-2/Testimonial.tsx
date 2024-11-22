@@ -54,13 +54,13 @@ const Testimonial = () => {
 									<p className="fs-four">{testimonial.text}</p>
 									<div className="d-flex mt-8 gap-6 align-items-center">
 										<div className="img-box">
-											{typeof testimonial.image === "object" &&
-											"customer1" in testimonial.image ? (
-												<Image
-													src={testimonial.image.customer1}
-													alt={testimonial.name}
-												/>
-											) : null}
+											<Image
+												src={testimonial.image}
+												width={60}
+												height={60}
+												className="rounded-circle"
+												alt={testimonial.name}
+											/>
 										</div>
 										<div className="profile-info">
 											<h5 className="mb-2">{testimonial.name}</h5>

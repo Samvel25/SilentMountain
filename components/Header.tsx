@@ -105,7 +105,7 @@ const Header = () => {
 					</div>
 					<Link
 						href="/"
-						className="navbar-brand ms-6 ms-xxl-15 d-flex align-items-center gap-2"
+						className="navbar-brand ps-6 ps-l-6 ps-xl-6 ps-xxl-20 d-flex align-items-center gap-2"
 					>
 						<Image src={fav} className="logo" alt="logo" />
 						<Image
@@ -118,15 +118,15 @@ const Header = () => {
 						className="collapse navbar-collapse d-flex gap-10 w-100 justify-content-end px-8 pe-2"
 						id="navbar-content"
 					>
-						<ul className="navbar-nav d-xl-flex d-none gap-6 py-4 py-lg-0 m-auto pe-20 align-self-center">
-							<li>
-								<Link
+						<ul className="navbar-nav d-xl-flex d-none gap-10 py-4 py-lg-0 m-auto pe-20 align-self-center">
+							{/* <li> */}
+							{/* <Link
 									className={`dropdown-nav ${homepage ? "active" : ""}`}
 									href="/"
 								>
 									Home
-								</Link>
-							</li>
+								</Link> */}
+							{/* </li> */}
 							<li>
 								<Link
 									className={`dropdown-nav ${
@@ -146,7 +146,7 @@ const Header = () => {
 									Services
 								</Link>
 							</li>
-							<li>
+							{/* <li>
 								<Link
 									className={`dropdown-nav ${
 										path == "/privacy-policy" && "active"
@@ -155,8 +155,8 @@ const Header = () => {
 								>
 									Privacy Policy
 								</Link>
-							</li>
-							<li>
+							</li> */}
+							{/* <li>
 								<Link
 									className={`dropdown-nav ${
 										path == "/terms-conditions" && "active"
@@ -165,7 +165,7 @@ const Header = () => {
 								>
 									Terms & Conditions
 								</Link>
-							</li>
+							</li> */}
 							<li>
 								<Link
 									className={`dropdown-nav ${path == "/blog" && "active"}`}

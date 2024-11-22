@@ -81,7 +81,12 @@ const AllGames = () => {
 													</div>
 													<div className="footer-area mb-7 text-center">
 														<div className="logo-area">
-															<Image src={profile} alt="img" />
+															<Image
+																src={profile}
+																width={80}
+																height={80}
+																alt="img"
+															/>
 														</div>
 														<h3 className="visible-slowly-bottom my-4">
 															{title}

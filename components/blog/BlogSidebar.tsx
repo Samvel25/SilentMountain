@@ -213,7 +213,7 @@ const BlogSidebar = ({
 										<span>{category.name}</span>
 									</div>
 									<div className="right-area">
-										<span>({category.count})</span>
+										{/* <span>({category.count})</span> */}
 									</div>
 								</Link>
 							</li>

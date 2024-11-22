@@ -454,7 +454,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 						</div>
 						<div className="col-sm-12">
 							<div className="single-input text-start">
-								<label htmlFor="subject">Subject (optional)</label>
+								<label htmlFor="subject">Subject (Optional)</label>
 								<input
 									type="text"
 									id="subject"

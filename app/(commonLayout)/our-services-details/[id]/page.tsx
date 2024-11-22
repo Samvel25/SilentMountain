@@ -39,7 +39,7 @@ const Page = () => {
 			image:
 				typeof testimonial.image === "string"
 					? testimonial.image
-					: testimonial.image.customer1.src, // Access 'customer1.src' if 'image' is an object
+					: testimonial.image.src, // Access 'customer1.src' if 'image' is an object
 		})
 	);
 
