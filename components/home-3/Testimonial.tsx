@@ -3,12 +3,22 @@ import Link from "next/link";
 import Slider, { Settings } from "react-slick";
 import { services } from "@/public/data/servicesData";
 
-// Extract testimonials from the desired service
-const testimonials =
-	services.find((service) => service.id === "game-development")?.details
-		.testimonials || [];
+// Import slick carousel CSS
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// Extract all testimonials from all services
+const testimonials = services.flatMap(
+	(service) => service.details.testimonials || []
+);
 
 const Testimonial = () => {
+	// Check if testimonials are available
+	if (testimonials.length === 0) {
+		console.warn("No testimonials found.");
+		return null; // Return null if no testimonials are available
+	}
+
 	const settings: Settings = {
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -30,6 +40,7 @@ const Testimonial = () => {
 			},
 		],
 	};
+
 	return (
 		<section className="testimonial-area">
 			<div className="container pt-120 pb-120">

@@ -5,7 +5,7 @@ import Footer from "@/components/home-2/Footer";
 export const metadata: Metadata = {
 	title: "BabyCheese - Unity Game Studio & Asset Creator",
 	description:
-		"BabyCheese is a leading studio specializing in developing games and crafting high-quality assets for Unity. Elevate your game development with our expertise.",
+		"We are a technical agency that builds digital products for businesses worldwide",
 };
 
 export default function RootLayout({
