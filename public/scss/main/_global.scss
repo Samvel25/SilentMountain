@@ -9,18 +9,18 @@
 
 	--gradient-one-color: linear-gradient(
 		179.33deg,
-		rgba(9, 146, 106, 0) 5%,
-		#09926a 90%
+		rgba(26, 188, 156, 0) 5%,
+		#1abc9c 90%
 	);
 	--box-shadow-one: 0px 4px 4px rgba(19, 40, 34, 0.2);
 
-	--p50: #e7fef7;
-	--p75: #9cf9dd;
-	--p100: #73f6cf;
-	--p200: #37f3bb;
-	--p300: #0ef0ad;
-	--p400: #0aa879;
-	--p500: #09926a;
+	--p50: #fef6e5;
+	--p75: #fee5b3;
+	--p100: #fedd99;
+	--p200: #fed480;
+	--p300: #fecc66;
+	--p400: #fec34d;
+	--p500: #fec23a;
 
 	--s50: #e9ebfd;
 	--s75: #a6abf8;
@@ -145,6 +145,10 @@ a {
 		outline: none;
 		color: var(--n0);
 	}
+}
+
+.logo {
+	width: 80px !important;
 }
 
 // Feature Tag
@@ -685,6 +689,11 @@ li {
 
 .section-header {
 	margin-bottom: 55px;
+	.nav-items-display {
+		display: block;
+	}
+	@media (max-width: 1200px) {
+	}
 }
 
 .cus-mar {
@@ -723,6 +732,15 @@ li {
 	padding-top: 70px;
 }
 
+.nav-items-display {
+	display: none;
+}
+@media (max-width: 1200px) {
+	.nav-items-display {
+		display: none !important;
+	}
+}
+
 @media (max-width: 991px) {
 	.pt-120 {
 		padding-top: 60px;
@@ -734,6 +752,10 @@ li {
 
 	.header-section {
 		box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+	}
+
+	.logo {
+		width: 70px !important;
 	}
 }
 

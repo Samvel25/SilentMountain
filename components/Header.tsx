@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import fav from "@/public/images/fav.png";
+import fav from "@/public/images/svg/fav.svg";
 import logo from "@/public/images/logo-text.png";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -90,10 +90,10 @@ const Header = () => {
 					headerFixed && "animated fadeInDown header-fixed"
 				}`}
 			>
-				<nav className="navbar w-100 flex-nowrap px-2 py-6 ps-2 ps-xl-12 ps-xxl-12 navbar-expand-xl">
+				<nav className="navbar w-100 flex-nowrap px-2 py-3 ps-2 ps-xl-12 ps-xxl-12 navbar-expand-xl d-flex justify-content-between">
 					<div
 						onClick={() => setSidebar(!sidebar)}
-						className="sidebar-close mobile-menu"
+						className="sidebar-close mobile-menu ms-xl-0 ms-2"
 					>
 						<button className="d-center d-grid d-xl-none">
 							<i className="material-symbols-outlined mat-icon fs-four">
@@ -108,14 +108,14 @@ const Header = () => {
 						className="navbar-brand ps-6 ps-l-6 ps-xl-6 ps-xxl-20 d-flex align-items-center gap-2"
 					>
 						<Image src={fav} className="logo" alt="logo" />
-						<Image
+						{/* <Image
 							src={logo}
 							className="logo-text d-xxl-block d-none"
 							alt="logo-text"
-						/>
+						/> */}
 					</Link>
 					<div
-						className="collapse navbar-collapse d-flex gap-10 w-100 justify-content-end px-8 pe-2"
+						className="collapse nav-items-display navbar-collapse d-flex gap-10 w-100 justify-content-end px-8 pe-2"
 						id="navbar-content"
 					>
 						<ul className="navbar-nav d-xl-flex d-none gap-10 py-4 py-lg-0 m-auto pe-20 align-self-center">

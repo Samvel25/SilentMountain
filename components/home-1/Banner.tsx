@@ -35,7 +35,7 @@ const Banner = () => {
 		dots: false,
 	};
 	return (
-		<section className="banner-section index-one overflow-hidden ">
+		<section className="banner-section hero-banner index-one overflow-hidden ">
 			<div className="shape-area">
 				<Image src={planet} className="shape-1" alt="icon" />
 				<Image src={console1Image} className="shape-2" alt="icon" />
