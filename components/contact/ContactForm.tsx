@@ -286,7 +286,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 	const initialFormData = {
 		name: "",
 		email: "",
-		subject: "",
+		// subject: "",
 		message: "",
 	};
 
@@ -369,7 +369,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
 		try {
 			const response = await fetch(
-				"https://script.google.com/macros/s/AKfycby4a2gW0KvhuOqkynaScPUldIUURScaO_DsZ8jTUGRfMtQ6byLIfeqaTV--bGG4ZsB6/exec", // Replace with your deployment URL
+				"https://script.google.com/macros/s/AKfycbzNNhOowz7jdWiqJOFywb-N5r6Ov6D5W9TsIMPMr_uPI03B8brpSJO-PVnP8B9jpAWf/exec", // Replace with your deployment URL
 				{
 					method: "POST",
 					headers: {
@@ -452,7 +452,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 								)}
 							</div>
 						</div>
-						<div className="col-sm-12">
+						{/* <div className="col-sm-12">
 							<div className="single-input text-start">
 								<label htmlFor="subject">Subject (Optional)</label>
 								<input
@@ -464,7 +464,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 									onChange={handleChange}
 								/>
 							</div>
-						</div>
+						</div> */}
 						<div className="col-sm-12">
 							<div className="single-input text-start">
 								<label htmlFor="message">Leave us a message</label>
