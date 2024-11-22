@@ -20,6 +20,7 @@ const Privacy = () => {
 									<li>
 										Visit our website at{" "}
 										<a
+											target="_blank"
 											className="text-green"
 											href="http://www.babycheese.studio"
 										>
@@ -381,7 +382,10 @@ const Privacy = () => {
 											may share your information with certain Google Maps
 											Platform APIs (e.g., Google Maps API, Places API). To find
 											out more about Google’s Privacy Policy, please refer to{" "}
-											<a href="https://policies.google.com/privacy">
+											<a
+												target="_blank"
+												href="https://policies.google.com/privacy"
+											>
 												https://policies.google.com/privacy
 											</a>
 											. We obtain and store on your device (&quot;cache&quot;)
@@ -518,7 +522,10 @@ const Privacy = () => {
 										have the right to complain to your local data protection
 										supervisory authority. You can find their contact details
 										here:{" "}
-										<a href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm">
+										<a
+											target="_blank"
+											href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm"
+										>
 											https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm
 										</a>
 										.
@@ -526,7 +533,10 @@ const Privacy = () => {
 									<p>
 										If you are located in Switzerland, the contact details for
 										the data protection authorities are available here:{" "}
-										<a href="https://www.edoeb.admin.ch/edoeb/en/home.html">
+										<a
+											target="_blank"
+											href="https://www.edoeb.admin.ch/edoeb/en/home.html"
+										>
 											https://www.edoeb.admin.ch/edoeb/en/home.html
 										</a>
 										.
@@ -567,7 +577,7 @@ const Privacy = () => {
 										features or services of our Services. To opt out of
 										interest-based advertising by advertisers on our Services,
 										visit{" "}
-										<a href="http://www.aboutads.info/choices/">
+										<a target="_blank" href="http://www.aboutads.info/choices/">
 											http://www.aboutads.info/choices/
 										</a>
 										.
