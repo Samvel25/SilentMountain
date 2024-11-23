@@ -1,39 +1,78 @@
 "use client";
 
-import { useParams, useRouter } from "next/navigation";
-import { blogs } from "@/public/data/blogs";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import { fetchBlogs } from "@/utils/api";
 import BlogSidebar from "@/components/blog/BlogSidebar";
-import { useState } from "react";
+
 import bubble from "@/public/images/abs-items/bubble.png";
 import ellipse7 from "@/public/images/abs-items/ellipse-7.png";
 
-const BlogPost = () => {
+import Banner from "@/components/blog/Banner";
+import { Blog } from "@/types/types";
+import { useState, useEffect } from "react";
+
+interface BlogPostProps {
+	params: { slug: string };
+}
+
+const BlogPost = ({ params }: BlogPostProps) => {
 	const router = useRouter();
-	const params = useParams();
-	const slug = params
-		? Array.isArray(params.slug)
-			? params.slug[0]
-			: params.slug
-		: null;
 	const [searchTerm, setSearchTerm] = useState("");
 	const [activeCategory, setActiveCategory] = useState("All");
-	const [commentForm, setCommentForm] = useState({
-		name: "",
-		email: "",
-		message: "",
-	});
-	const [x, setX] = useState(0);
-	const [y, setY] = useState(0);
+	const [blog, setBlog] = useState<Blog | null>(null);
+	const [blogsData, setBlogsData] = useState<Blog[]>([]);
+	const [loading, setLoading] = useState(true);
 
-	// Find the blog post by slug
-	const blog = slug ? blogs.find((blog) => blog.slug === slug) : null;
+	useEffect(() => {
+		const fetchBlogData = async () => {
+			let slug = params?.slug;
 
-	if (!blog) {
-		return notFound();
+			// Ensure slug is a string
+			if (Array.isArray(slug)) {
+				slug = slug[0];
+			}
+
+			console.log("Slug from URL:", slug);
+
+			// Fetch the blogs data
+			const data = await fetchBlogs();
+
+			if (!Array.isArray(data)) {
+				console.error("Fetched data is not an array:", data);
+				setLoading(false);
+				return;
+			}
+
+			// Find the blog with the matching slug
+			const foundBlog = data.find(
+				(b: Blog) => b.slug.toLowerCase() === slug?.toLowerCase()
+			);
+
+			if (!foundBlog) {
+				console.log("Blog not found, redirecting to 404 page");
+				router.push("/404"); // Redirect to custom 404 page
+				return;
+			} else {
+				setBlog(foundBlog);
+			}
+
+			setBlogsData(data);
+			setLoading(false);
+		};
+
+		fetchBlogData();
+	}, [params, router]);
+
+	if (loading) {
+		return <div>Loading...</div>; // Display a loading indicator while fetching data
 	}
 
+	if (!blog) {
+		return null; // Blog not found, return null to avoid rendering
+	}
+
+	// Handle back to blogs navigation
 	const handleBackToBlogs = () => {
 		if (searchTerm || activeCategory !== "All") {
 			const params = new URLSearchParams();
@@ -45,25 +84,8 @@ const BlogPost = () => {
 		}
 	};
 
-	const handleMouseMove = (e: React.MouseEvent) => {
-		setX(e.nativeEvent.offsetX);
-		setY(e.nativeEvent.offsetY);
-	};
-
-	const style = {
-		"--x": `${x}px`,
-		"--y": `${y}px`,
-	} as React.CSSProperties;
-
-	const handleCommentSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
-		console.log("Comment submitted:", commentForm);
-		setCommentForm({ name: "", email: "", message: "" });
-	};
-
 	return (
 		<>
-			{/* Banner */}
 			<section className="banner-section inner-banner position-relative store">
 				<div className="shape-area">
 					<Image src={bubble} className="shape-1" alt="icon" />
@@ -81,6 +103,9 @@ const BlogPost = () => {
 					</div>
 				</div>
 			</section>
+
+			<Banner />
+
 			<section className="recently-completed blogs blog-section pb-120">
 				<div className="container pt-120">
 					{/* Add back button if coming from search/category */}
@@ -95,62 +120,83 @@ const BlogPost = () => {
 							<div className="single-box">
 								<div className="position-relative d-grid align-items-center">
 									<div className="img-box">
-										{blog.details.useIframe ? (
+										{blog.useIframe ? (
 											<iframe
 												frameBorder="0"
-												src={blog.details.videoUrl}
+												src={blog.videoUrl}
 												allowFullScreen
 												width="975"
 												height="670"
 											></iframe>
 										) : (
-											<Image
-												src={blog.details.blogImage}
-												alt={blog.title}
-												width={975}
-												height={670}
-											/>
+											blog.image.length > 0 && (
+												<Image
+													src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${blog.image[0].formats.large.url}`}
+													alt={blog.title}
+													width={975}
+													height={670}
+												/>
+											)
 										)}
 									</div>
-									<p>{blog.details.mainContent.intro}</p>
+									<p>
+										{blog.mainContent.intro
+											.map((intro: { children: { text: string }[] }) =>
+												intro.children.map((child) => child.text).join(" ")
+											)
+											.join(" ")}
+									</p>
 								</div>
 							</div>
 							<div className="single-content row align-items-center mb-5">
 								<div className="col-lg-6">
 									<h4 className="mb-6">Key Points:</h4>
 									<ul className="ms-10 mb-8 d-grid gap-3 list fs-seven">
-										{blog.details.points.map((point, index) => (
-											<li key={index} className="d-flex align-items-center">
-												{point}
-											</li>
-										))}
+										{blog.points.map(
+											(point: { point: string }, index: number) => (
+												<li key={index} className="d-flex align-items-center">
+													{point.point}
+												</li>
+											)
+										)}
 									</ul>
 								</div>
 								<div className="col-lg-6">
 									<div className="img-area">
-										<Image src={blog.img} alt={blog.title} />
+										{blog.image.length > 0 && (
+											<Image
+												src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${blog.image[0].formats.large.url}`}
+												alt={blog.title}
+												width={975}
+												height={670}
+											/>
+										)}
 									</div>
 								</div>
 							</div>
-							<p>{blog.details.mainContent.conclusion}</p>
+							<p>
+								{blog.mainContent.conclusion
+									.map((conclusion: { children: { text: string }[] }) =>
+										conclusion.children.map((child) => child.text).join(" ")
+									)
+									.join(" ")}
+							</p>
 							<div className="single-box quote mt-5 p-5 p-sm-10 alt-bg">
 								<div className="icon-box">
 									<i className="material-symbols-outlined mat-icon display-one">
 										format_quote
 									</i>
 								</div>
-								<p className="fs-four fw-bold">{blog.details.quote}</p>
-								<span className="d-center fw-bolder mt-4">
-									{blog.details.author}
-								</span>
+								<p className="fs-four fw-bold">{blog.quote}</p>
+								<span className="d-center fw-bolder mt-4">{blog.author}</span>
 							</div>
 
 							<div className="single-box tag-area py-5 d-center flex-wrap gap-3 justify-content-between mt-5">
 								<p>
 									Tags:{" "}
-									{blog.tags.map((tag, index) => (
+									{blog.tags.map((tag: { tags: string }, index: number) => (
 										<span key={index} className="me-2">
-											{tag}
+											{tag.tags}
 											{index < blog.tags.length - 1 ? "," : ""}
 										</span>
 									))}
@@ -158,7 +204,6 @@ const BlogPost = () => {
 							</div>
 						</div>
 
-						{/* Sidebar Column */}
 						<div className="col-xl-4 col-lg-5 mt-8 mt-lg-0 service-details">
 							<BlogSidebar
 								onSearch={setSearchTerm}
@@ -167,6 +212,7 @@ const BlogPost = () => {
 								initialCategory={activeCategory}
 								currentBlogId={blog.id}
 								showRelatedArticles={true}
+								blogs={blogsData}
 							/>
 						</div>
 					</div>
