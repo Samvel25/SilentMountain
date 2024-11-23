@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "SILENT_MOUNTAIN",
+      "script": "npm",
+      "args": "start",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "instances": 1,
+      "exec_mode": "cluster",
+      "watch": false,
+      "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }
+  ]
+}
