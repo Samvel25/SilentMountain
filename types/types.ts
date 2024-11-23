@@ -32,6 +32,7 @@ export interface Blog {
 	slug: string;
 	description: { type: string; children: { text: string }[] }[];
 	image: Image[];
+	imagePoint: Image;
 	videoUrl: string;
 	useIframe: boolean;
 	points: { id: number; point: string }[];

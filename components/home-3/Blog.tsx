@@ -1,9 +1,24 @@
-import { blogs } from "@/public/data/blogs";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
+import { fetchBlogs } from "@/utils/api";
+import { Blog } from "@/types/types";
 
-const Blog = () => {
+const BlogSection = () => {
+	const [blogs, setBlogs] = useState<Blog[]>([]);
+
+	useEffect(() => {
+		const getBlogs = async () => {
+			const data = await fetchBlogs();
+			console.log("Fetched Blogs:", data);
+			setBlogs(data);
+		};
+
+		console.log("useEffect triggered");
+		getBlogs();
+	}, []);
+
 	const settings = {
 		slidesToShow: 2,
 		slidesToScroll: 1,
@@ -31,16 +46,16 @@ const Blog = () => {
 				<div className="row section-header justify-content-center">
 					<div className="col-lg-6 text-center">
 						{/* <h4 className="sub-title">
-							The Latest <span>Trends and Technologies</span>
-						</h4> */}
+              The Latest <span>Trends and Technologies</span>
+            </h4> */}
 						<span className="fs-two heading mb-6">
 							Tips and Tricks from Our <span>Game Development Experts</span>
 						</span>
 						{/* <p>
-							Behind the scenes, we share our game development process, research
-							and development efforts, and reflections on our growth in the
-							gaming industry
-						</p> */}
+              Behind the scenes, we share our game development process, research
+              and development efforts, and reflections on our growth in the
+              gaming industry
+            </p> */}
 					</div>
 				</div>
 				<div className="row cus-mar">
@@ -50,25 +65,41 @@ const Blog = () => {
 								<div className="single-box">
 									<div className="position-relative d-grid align-items-center">
 										<div className="img-box">
-											<Image src={blog.img} alt={blog.title} />
+											{blog.useIframe ? (
+												<iframe
+													frameBorder="0"
+													src={blog.videoUrl}
+													allowFullScreen
+													width="975"
+													height="670"
+												></iframe>
+											) : (
+												blog.image.length > 0 && (
+													<Image
+														src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${blog.image[0].formats.large.url}`}
+														alt={blog.title}
+														width={975}
+														height={670}
+													/>
+												)
+											)}
 										</div>
 										<div className="position-absolute cus-position bottom-0 start-0">
 											<div className="content-box p-3 p-sm-6">
 												<div className="top-bar d-flex align-items-center gap-3">
 													<h5>News</h5>
-													<span>25 January,2023</span>
+													<span>
+														{new Date(blog.createdAt).toLocaleDateString()}
+													</span>
 												</div>
-												<Link href={`/blog/${blog.id}`}>
+												<Link href={`/blog/${blog.slug}`}>
 													<h4 className="mt-3">{blog.title}</h4>
 												</Link>
 												<Link
-													href={`/blog/${blog.id}`}
+													href={`/blog/${blog.slug}`}
 													className="end-area mt-8 d-center"
 												>
-													<i className="material-symbols-outlined">
-														{" "}
-														call_made{" "}
-													</i>
+													<i className="material-symbols-outlined">call_made</i>
 												</Link>
 											</div>
 										</div>
@@ -83,4 +114,4 @@ const Blog = () => {
 	);
 };
 
-export default Blog;
+export default BlogSection;

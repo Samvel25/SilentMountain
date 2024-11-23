@@ -104,8 +104,6 @@ const BlogPost = ({ params }: BlogPostProps) => {
 				</div>
 			</section>
 
-			<Banner />
-
 			<section className="recently-completed blogs blog-section pb-120">
 				<div className="container pt-120">
 					{/* Add back button if coming from search/category */}
@@ -165,7 +163,7 @@ const BlogPost = ({ params }: BlogPostProps) => {
 									<div className="img-area">
 										{blog.image.length > 0 && (
 											<Image
-												src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${blog.image[0].formats.large.url}`}
+												src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${blog.imagePoint.formats.large.url}`}
 												alt={blog.title}
 												width={975}
 												height={670}
