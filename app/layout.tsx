@@ -29,7 +29,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head>
-				<title>Gamestorm - Gaming Studio Nextjs Template </title>
+				<title>BabyCheese - Unity Game Studio & Asset Creator</title>
 			</head>
 			<body className={`${chakraPetch.variable} ${inter.variable} `}>
 				{/* <AnimatedCursor
