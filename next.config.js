@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		domains: ["localhost"],
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "admin.babycheese.studio",
+				pathname: "/uploads/**", // Allow all images in the /uploads folder
+			},
+		],
 	},
 };
 

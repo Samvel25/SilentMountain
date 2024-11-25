@@ -85,7 +85,7 @@ const Footer = () => {
 									</Link>
 								</li>
 								<li>
-									<Link href="/game" className="d-flex align-items-center">
+									<Link href="/portfolio" className="d-flex align-items-center">
 										Portfolio
 									</Link>
 								</li>
