@@ -28,8 +28,8 @@ const Blogs = () => {
 		const search = searchParams?.get("search");
 		const category = searchParams?.get("category");
 
-		if (search) setSearchTerm(search);
-		if (category) setActiveCategory(category);
+		if (search !== null) setSearchTerm(search);
+		if (category !== null) setActiveCategory(category);
 	}, [searchParams]);
 
 	const filteredBlogs = blogs.filter((blog) => {

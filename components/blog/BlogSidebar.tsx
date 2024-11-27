@@ -37,6 +37,10 @@ const BlogSidebar = ({
 	const [x, setX] = useState(0);
 	const [y, setY] = useState(0);
 
+	useEffect(() => {
+		setActiveCategory(initialCategory);
+	}, [initialCategory]);
+
 	// Generate categories from blogs data
 	const categories: Category[] = [
 		{ name: "All", count: blogs.length },
