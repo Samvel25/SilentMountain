@@ -68,20 +68,22 @@ const Banner = () => {
 							<div className="col-xl-7 col-lg-7">
 								<div className="main-content">
 									<div className="mb-8">
-										<h3 className="visible-slowly-bottom sub-title">
-											<span>Building Gaming Worlds</span>
-										</h3>
-										<span className="display-one">
-											We Craft Games
+										<h1 className="visible-slowly-bottom sub-title">
+											Building Gaming Worlds
+										</h1>
+										<span className="visible-slowly-bottom display-one">
+											<span>We Craft Games</span>
 											<br />
-											<TypeAnimation
-												sequence={["Entertainment", "Joy", "Games"]}
-												wrapper="span"
-												className="typed d-inline-block"
-												repeat={Infinity}
-												speed={2}
-												deletionSpeed={50}
-											/>
+											<div>
+												<TypeAnimation
+													sequence={["Entertainment", "Joy", "Games"]}
+													wrapper="span"
+													className="typed d-inline-block"
+													repeat={Infinity}
+													speed={2}
+													deletionSpeed={50}
+												/>
+											</div>
 										</span>
 										<p className="fs-four">
 											We are a technical agency that builds digital products for

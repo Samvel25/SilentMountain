@@ -59,8 +59,7 @@ const About = () => {
 								The Ultimate <span>Gaming Destination</span>
 							</h4>
 							<span className="fs-two heading mb-6">
-								Experience the magic of <span>Silent Mountain</span> Game
-								Studios
+								Experience the magic of <span>BabyCheese </span> Studios
 							</span>
 						</div>
 						<div className="row justify-content-around">

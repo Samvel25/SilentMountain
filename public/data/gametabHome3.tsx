@@ -59,12 +59,13 @@ export const gameTabHome3 = [
 				title: "Site Specs",
 				link: "http://sitespecs.io/",
 			},
+
 			{
 				id: 3,
-				profile: logo_hollywood_legends_makeover,
-				img: banner_hollywood_legends_makeover,
-				title: "Hollywood Legends: Makeover",
-				link: "https://hollywood-legends-makeover.en.softonic.com/android",
+				profile: logo_crazy_mau_mau,
+				img: banner_crazy_mau_mau,
+				title: "Crazy Mau Mau",
+				link: "http://crazymaumau.com/",
 			},
 			{
 				id: 4,
@@ -75,10 +76,10 @@ export const gameTabHome3 = [
 			},
 			{
 				id: 5,
-				profile: logo_crazy_mau_mau,
-				img: banner_crazy_mau_mau,
-				title: "Crazy Mau Mau",
-				link: "http://crazymaumau.com/",
+				profile: logo_hollywood_legends_makeover,
+				img: banner_hollywood_legends_makeover,
+				title: "Hollywood Legends: Makeover",
+				link: "https://hollywood-legends-makeover.en.softonic.com/android",
 			},
 		],
 	},

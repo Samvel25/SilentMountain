@@ -111,7 +111,7 @@ export const services = [
 				{
 					position: "Head of Strategy, Paxos",
 					image: profile_walter_hessert,
-					text: "When they started delivering on all your wildest requests, that’s when we decided to invest in building a long-term relationship with Silent Mountain. The developers I personally got to work with have a strong commitment to work. Everything they’ve promised, they delivered.",
+					text: "When they started delivering on all your wildest requests, that’s when we decided to invest in building a long-term relationship with BabyCheese Studio. The developers I personally got to work with have a strong commitment to work. Everything they’ve promised, they delivered.",
 					name: "Walter Hessert",
 					location: "USA",
 					date: "Mar 22, 2023",
@@ -234,7 +234,7 @@ export const services = [
 				{
 					position: "Founder, Forklift Studios",
 					image: profile_scott_hoffer,
-					text: "Silent Mountain’s leadership has deep experience in engineering management, which is part of the reason they’ve been so reliable in pairing our projects with exactly the right developers. They took the time to understand what we needed to hit the ground running fast (and on budget) and have made our outsourcing process remarkably easy and efficient.",
+					text: "BabyCheese Studio’s leadership has deep experience in engineering management, which is part of the reason they’ve been so reliable in pairing our projects with exactly the right developers. They took the time to understand what we needed to hit the ground running fast (and on budget) and have made our outsourcing process remarkably easy and efficient.",
 					name: "Scott Hoffer",
 					location: "USA",
 					date: "May 12, 2023",
@@ -348,7 +348,7 @@ export const services = [
 				{
 					position: "Founder & CEO, NAME.AM, Inc",
 					image: profile_mesrop_minasyan,
-					text: "Silent Mountain is very honest and realistic when scoping and scheduling the development which highly enhances our ability to plan. The team is not only responsive to changes in requirements, but only accessible. I’ve worked with Silent Mountain in the past, and I’m sure we’ll have another opportunity to cooperate.",
+					text: "BabyCheese Studio is very honest and realistic when scoping and scheduling the development which highly enhances our ability to plan. The team is not only responsive to changes in requirements, but only accessible. I’ve worked with BabyCheese Studio in the past, and I’m sure we’ll have another opportunity to cooperate.",
 					name: "Mesrop Minasyan",
 					location: "Armenia",
 					date: "Apr 15, 2023",
@@ -465,7 +465,7 @@ export const services = [
 				{
 					position: "Co-Founder, SiteSpecs",
 					image: profile_michael_reilly,
-					text: "When looking to outsource developers for some of our projects, I was fortunate to sign with Silent Mountain. The human resources are of the highest quality. The team provides an exceptional combination of enhanced technical skills and strong communication which is something you do not always get from an external team.",
+					text: "When looking to outsource developers for some of our projects, I was fortunate to sign with BabyCheese Studio. The human resources are of the highest quality. The team provides an exceptional combination of enhanced technical skills and strong communication which is something you do not always get from an external team.",
 					name: "Michael Reilly",
 					location: "USA",
 					date: "Feb 10, 2023",
