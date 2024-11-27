@@ -1,3 +1,15 @@
+// import gameImg1 from "@/public/images/all-games-1.png";
+// import gameImg2 from "@/public/images/all-games-2.png";
+// import gameImg3 from "@/public/images/all-games-3.png";
+// import gameImg4 from "@/public/images/all-games-4.png";
+// import gameImg5 from "@/public/images/all-games-5.png";
+// import gameImg6 from "@/public/images/all-games-6.png";
+// import profile1 from "@/public/images/all-games-profile-1.png";
+// import profile2 from "@/public/images/all-games-profile-2.png";
+// import profile3 from "@/public/images/all-games-profile-3.png";
+// import profile4 from "@/public/images/all-games-profile-4.png";
+// import profile5 from "@/public/images/all-games-profile-5.png";
+// import profile6 from "@/public/images/all-games-profile-6.png";
 import logo_tricky_bridge from "@/public/images/portfolio/logo-tricky-bridge.png";
 import banner_tricky_bridge from "@/public/images/portfolio/banner-tricky-bridge.png";
 import logo_kings_of_durak from "@/public/images/portfolio/logo-kings-of-durak.png";
