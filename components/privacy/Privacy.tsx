@@ -22,9 +22,9 @@ const Privacy = () => {
 										<a
 											target="_blank"
 											className="text-green"
-											href="http://www.babycheese.studio"
+											href="https://babycheese.studio/"
 										>
-											http://www.babycheese.studio
+											https://www.babycheese.studio
 										</a>
 										, or any website of ours that links to this privacy notice
 									</li>
