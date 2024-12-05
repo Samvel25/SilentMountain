@@ -1333,21 +1333,36 @@
 
 // Testimonial area
 .testimonial-area {
-	.container {
-		background-color: var(--n800);
-		background-image: url(/images/testimonial-sec-bg.png),
-			url(/images/testimonial-sec2-bg.png);
+	.background {
+		position: relative;
+		padding-left: 15px;
+		padding-right: 15px;
+		background-image: linear-gradient(
+				rgba(34, 36, 52, 0.3),
+				/* Slightly reduced opacity for a lighter effect */
+					rgba(34, 36, 52, 0.3)
+			),
+			url(/images/testimonial-bg.png);
 		background-position: center left, right center;
 		background-repeat: no-repeat;
+		background-size: cover;
+		background-blend-mode: overlay;
 	}
+
 	.img-box {
 		img {
+			display: block;
 			margin: auto;
+			filter: drop-shadow(
+				0 4px 6px rgba(0, 0, 0, 0.15)
+			); /* Softer shadow for lighter effect */
 		}
 	}
+
 	.star-area {
 		i {
 			color: var(--warning-color);
+			text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Reduced shadow for lightness */
 		}
 	}
 }

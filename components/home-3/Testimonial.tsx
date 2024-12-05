@@ -23,7 +23,7 @@ const Testimonial = () => {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 3500,
 		fade: false,
 		infinite: true,
 		pauseOnFocus: true,
@@ -43,7 +43,7 @@ const Testimonial = () => {
 
 	return (
 		<section className="testimonial-area">
-			<div className="container pt-120 pb-120">
+			<div className="background pt-120 pb-120">
 				<div className="row justify-content-center">
 					<div className="col-lg-6">
 						<Slider {...settings} className="testimonial-sec-carousel">

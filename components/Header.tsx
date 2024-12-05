@@ -118,7 +118,7 @@ const Header = () => {
 						className="collapse nav-items-display navbar-collapse d-flex gap-10 w-100 justify-content-end px-8 pe-2"
 						id="navbar-content"
 					>
-						<ul className="navbar-nav d-xl-flex d-none gap-10 py-4 py-lg-0 m-auto pe-20 align-self-center">
+						<ul className="navbar-nav d-xl-flex d-none gap-10 py-4 py-lg-0 m-auto align-self-center">
 							{/* <li> */}
 							{/* <Link
 									className={`dropdown-nav ${homepage ? "active" : ""}`}
@@ -166,14 +166,14 @@ const Header = () => {
 									Terms & Conditions
 								</Link>
 							</li> */}
-							<li>
+							{/* <li>
 								<Link
 									className={`dropdown-nav ${path == "/blog" && "active"}`}
 									href="/blog"
 								>
 									Blog
 								</Link>
-							</li>
+							</li> */}
 							<li>
 								<Link
 									className={`dropdown-nav ${path == "/contact" && "active"}`}

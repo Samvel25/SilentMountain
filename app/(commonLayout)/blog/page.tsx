@@ -7,9 +7,13 @@ const page = () => {
 	return (
 		<>
 			{/* Banner  */}
-			<Banner />
+
+			{/* <Banner /> */}
+
 			{/* Blogs */}
-			<Blogs />
+
+			{/* <Blogs /> */}
+
 			{/* Instagram posts */}
 			{/* <InstagramPost /> */}
 		</>

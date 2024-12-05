@@ -99,7 +99,7 @@ const Sidebar = ({ sidebar, setSidebar }: sideBarProps) => {
 									</Link>
 								</li>
 								{/* Other Links */}
-								<li>
+								{/* <li>
 									<Link
 										className={`dropdown-nav fs-three heading ${
 											currentPath === "/blog" ? "active" : ""
@@ -109,7 +109,7 @@ const Sidebar = ({ sidebar, setSidebar }: sideBarProps) => {
 									>
 										Blog
 									</Link>
-								</li>
+								</li> */}
 								<li>
 									<Link
 										className={`dropdown-nav fs-three heading ${

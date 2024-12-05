@@ -8,7 +8,7 @@ const InstagramPost = () => {
 		slidesToShow: 6,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 3500,
 		centerMode: true,
 		fade: false,
 		infinite: true,

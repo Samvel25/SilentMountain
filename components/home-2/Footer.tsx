@@ -98,11 +98,11 @@ const Footer = () => {
 									</Link>
 								</li>
 
-								<li>
+								{/* <li>
 									<Link href="/blog" className="d-flex align-items-center">
 										Blog
 									</Link>
-								</li>
+								</li> */}
 								<li>
 									<Link href="/contact" className="d-flex align-items-center">
 										Contact

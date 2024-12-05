@@ -33,7 +33,7 @@ export default function Home() {
 				<Testimonials />
 			</div>
 
-			<Blog />
+			{/* <Blog /> */}
 			<div className="pt-120">
 				<Contact />
 			</div>

@@ -11,7 +11,7 @@ const Gallery = () => {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 3500,
 		fade: false,
 		infinite: true,
 		pauseOnFocus: true,
