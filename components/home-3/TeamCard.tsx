@@ -32,7 +32,7 @@ const TeamCard = ({ name, img, designation = "Artist" }: teamProps) => {
 								<i className="fab fa-facebook-f"></i>
 							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link
 								href="https://www.instagram.com"
 								aria-label="Instagram"
@@ -40,7 +40,7 @@ const TeamCard = ({ name, img, designation = "Artist" }: teamProps) => {
 							>
 								<i className="fab fa-instagram"></i>
 							</Link>
-						</li>
+						</li> */}
 						<li>
 							<Link
 								href="https://www.linkedin.com/company/babycheese"

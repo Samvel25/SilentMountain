@@ -202,7 +202,7 @@ const ShopDetails = () => {
 												<i className="fab fa-facebook-f"></i>
 											</Link>
 										</li>
-										<li>
+										{/* <li>
 											<Link
 												href="https://www.instagram.com"
 												aria-label="Instagram"
@@ -210,7 +210,7 @@ const ShopDetails = () => {
 											>
 												<i className="fab fa-instagram"></i>
 											</Link>
-										</li>
+										</li> */}
 										<li>
 											<Link
 												href="https://www.linkedin.com/company/babycheese"

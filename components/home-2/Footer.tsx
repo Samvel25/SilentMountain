@@ -41,7 +41,7 @@ const Footer = () => {
 										<i className="fab fa-facebook-f"></i>
 									</Link>
 								</li>
-								<li>
+								{/* <li>
 									<Link
 										target="_blank"
 										href="https://www.instagram.com"
@@ -50,7 +50,7 @@ const Footer = () => {
 									>
 										<i className="fab fa-instagram"></i>
 									</Link>
-								</li>
+								</li> */}
 								<li>
 									<Link
 										target="_blank"
