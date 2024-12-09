@@ -26,7 +26,7 @@ const Community = () => {
 										<ul className="d-flex gap-4 social-area">
 											<li>
 												<Link
-													href="https://www.facebook.com"
+													href="https://www.facebook.com/babycheese.studio"
 													aria-label="Facebook"
 													className="d-center"
 												>
@@ -44,7 +44,7 @@ const Community = () => {
 											</li>
 											<li>
 												<Link
-													href="https://www.linkedin.com"
+													href="https://www.linkedin.com/company/babycheese"
 													aria-label="Linkedin"
 													className="d-center"
 												>

@@ -33,7 +33,6 @@ const Privacy = () => {
 										marketing or events
 									</li>
 								</ul>
-
 								{/* Summary of Key Points */}
 								<section className="privacy-section">
 									<h4>Summary of Key Points</h4>

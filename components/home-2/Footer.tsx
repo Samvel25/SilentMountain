@@ -24,7 +24,7 @@ const Footer = () => {
 						<div className="single-box visible-from-bottom">
 							<Link href="/">
 								{/* <Image src={logoText} className="logo" alt="logo" /> */}
-								<h5>BabyCheese</h5>
+								<h5>BabyCheese Studio</h5>
 							</Link>
 							<p className="mt-4 mb-6">
 								We are a technical agency that builds digital products for
@@ -34,7 +34,7 @@ const Footer = () => {
 								<li>
 									<Link
 										target="_blank"
-										href="https://www.facebook.com"
+										href="https://www.facebook.com/babycheese.studio"
 										aria-label="Facebook"
 										className="d-center"
 									>
@@ -54,7 +54,7 @@ const Footer = () => {
 								<li>
 									<Link
 										target="_blank"
-										href="https://www.linkedin.com"
+										href="https://www.linkedin.com/company/babycheese"
 										aria-label="Linkedin"
 										className="d-center"
 									>
@@ -177,7 +177,7 @@ const Footer = () => {
 								<div className="copyright">
 									<p>
 										Copyright © {new Date().getFullYear()}{" "}
-										<Link href="/">Babyheese</Link> - All Right Reserved
+										<Link href="/">Babyheese Studio</Link> - All Right Reserved
 									</p>
 								</div>
 							</div>

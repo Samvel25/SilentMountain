@@ -18,13 +18,13 @@ const Footer = () => {
 		{
 			id: 1,
 			name: "Facebook",
-			link: "https://www.facebook.com",
+			link: "https://www.facebook.com/babycheese.studio",
 			icon: <i className="fab fa-facebook-f"></i>,
 		},
 		{
 			id: 3,
 			name: "Linkedin",
-			link: "https://www.linkedin.com",
+			link: "https://www.linkedin.com/company/babycheese",
 			icon: <i className="fab fa-linkedin-in"></i>,
 		},
 		{

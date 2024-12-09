@@ -63,7 +63,7 @@ const Contact = () => {
 							<ul className="d-flex justify-content-center gap-4 social-area py-4 py-sm-8 mt-5 mt-sm-10">
 								<li>
 									<Link
-										href="https://www.facebook.com"
+										href="https://www.facebook.com/babycheese.studio"
 										aria-label="Facebook"
 										className="d-center"
 									>
@@ -81,7 +81,7 @@ const Contact = () => {
 								</li>
 								<li>
 									<Link
-										href="https://www.linkedin.com"
+										href="https://www.linkedin.com/company/babycheese"
 										aria-label="Linkedin"
 										className="d-center"
 									>
