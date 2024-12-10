@@ -139,7 +139,7 @@
 	.sidebar-wrapper .sidebar-content {
 		position: absolute;
 		z-index: 9999;
-		left: 100px;
+		left: 0;
 		top: 70px;
 		height: calc(100vh - 70px);
 		overflow: scroll;
@@ -704,7 +704,7 @@
 		width: 50px;
 	}
 	.sidebar-wrapper .sidebar-content {
-		left: 50px;
+		left: 0px;
 	}
 	.banner-section .col-10 {
 		width: 100% !important;
@@ -744,9 +744,13 @@
 	}
 	.sidebar-wrapper .sidebar-content .header-fixed,
 	.sidebar-wrapper .sidebar-content .header-section {
-		justify-content: start;
+		justify-content: center;
 	}
 	.header-section .navbar .navbar-nav {
+		li {
+			display: flex;
+			justify-content: center;
+		}
 		width: 100%;
 	}
 	.our-gaming-community .main-content {
